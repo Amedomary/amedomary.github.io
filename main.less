@@ -1,93 +1,56 @@
+@keyframes "heart1" {
+	from {
+		transform: translate3d(0, 0, 0) scale(1) rotate(0);
+		opacity: 1;
+	}
+	to {
+		transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
+		opacity: 0;
+	}
+}
+
+@keyframes "heart2" {
+	from {
+		transform: translate3d(0, 0, 0) scale(1) rotate(0);
+		opacity: 1;
+	}
+	to {
+		transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
+		opacity: 0;
+	}
+}
+
 .social-button {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform .8s ease-in-out;
-    transition: -webkit-transform .8s ease-in-out;
-    transition: transform .8s ease-in-out;
-    transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out
-}
-
-.social-button:hover span::before {
-    opacity: 1;
-    -webkit-animation: heart1 1.49s ease .3s infinite;
-    animation: heart1 1.49s ease .3s infinite
-}
-.social-button:hover span::after {
-    opacity: 1;
-    -webkit-animation: heart2 1.49s ease 590ms infinite;
-    animation: heart2 1.49s ease 590ms infinite
-}
-.social-button span {
-    position: relative;
-    display: inline-block;
-    width: 30px;
-    height: 40px;
-    background: url(http://www.thegaragesociety.com/static/images/content/icons/icon-social-media-filled.svg) 50% 50% no-repeat;
-    text-align: center
-}
-.social-button span::after, .social-button span::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url(http://www.thegaragesociety.com/static/images/content/icons/icon-social-media-filled.svg) 50% 50% no-repeat;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: 0;
-    -webkit-transition: opacity .3s ease;
-    transition: opacity .3s ease
-}
-
-@-webkit-keyframes heart1 {
-    from {
-        -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
-        transform: translate3d(0, 0, 0) scale(1) rotate(0);
-        opacity: 1
-    }
-    to {
-        -webkit-transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
-        transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
-        opacity: 0
-    }
-}
-
-@keyframes heart1 {
-    from {
-        -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
-        transform: translate3d(0, 0, 0) scale(1) rotate(0);
-        opacity: 1
-    }
-    to {
-        -webkit-transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
-        transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
-        opacity: 0
-    }
-}
-
-@-webkit-keyframes heart2 {
-    from {
-        -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
-        transform: translate3d(0, 0, 0) scale(1) rotate(0);
-        opacity: 1
-    }
-    to {
-        -webkit-transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
-        transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
-        opacity: 0
-    }
-}
-
-@keyframes heart2 {
-    from {
-        -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
-        transform: translate3d(0, 0, 0) scale(1) rotate(0);
-        opacity: 1
-    }
-    to {
-        -webkit-transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
-        transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
-        opacity: 0
-    }
+	transform: translate3d(0, 0, 0);
+	transition: transform .8s ease-in-out;
+	&:hover {
+		span {
+			&::before {
+				opacity: 1;
+				animation: heart1 1.49s ease .3s infinite;
+			}
+			&::after {
+				opacity: 1;
+				animation: heart2 1.49s ease 590ms infinite;
+			}
+		}
+	}
+	span {
+		position: relative;
+		display: inline-block;
+		width: 30px;
+		height: 40px;
+		background: url(http://www.thegaragesociety.com/static/images/content/icons/icon-social-media-filled.svg) 50% 50% no-repeat;
+		text-align: center;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url(http://www.thegaragesociety.com/static/images/content/icons/icon-social-media-filled.svg) 50% 50% no-repeat;
+			transition: opacity .3s ease;
+		}
+	}
 }
