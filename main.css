@@ -60,7 +60,7 @@
     display: inline-block;
     width: 30px;
     height: 40px;
-    background: url(/../images/content/icons/icon-social-media.svg) 50% 50% no-repeat;
+    background: url(http://www.thegaragesociety.com/static/images/content/icons/icon-social-media-filled.svg) 50% 50% no-repeat;
     text-align: center
 }
 .social-button span::after, .social-button span::before {
