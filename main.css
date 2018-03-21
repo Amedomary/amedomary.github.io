@@ -1,0 +1,203 @@
+.social-button {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out
+}
+@media (max-width:767px) {
+    .social-button span::before {
+        opacity: 1;
+        -webkit-animation: heart1 1.49s ease .3s infinite;
+        animation: heart1 1.49s ease .3s infinite
+    }
+    .social-button span::after {
+        opacity: 1;
+        -webkit-animation: heart2 1.49s ease 590ms infinite;
+        animation: heart2 1.49s ease 590ms infinite
+    }
+}
+.social-button:hover span::before {
+    opacity: 1;
+    -webkit-animation: heart1 1.49s ease .3s infinite;
+    animation: heart1 1.49s ease .3s infinite
+}
+.social-button:hover span::after {
+    opacity: 1;
+    -webkit-animation: heart2 1.49s ease 590ms infinite;
+    animation: heart2 1.49s ease 590ms infinite
+}
+.social-button:hover .social-networks {
+    pointer-events: auto
+}
+.social-button:hover .social-networks li {
+    opacity: 1
+}
+.social-button:hover .social-networks li:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s
+}
+.social-button:hover .social-networks li:nth-child(2) {
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
+}
+.social-button:hover .social-networks li:nth-child(3) {
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+.social-button:hover .social-networks a:hover {
+    -webkit-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0)
+}
+.social-button:hover .social-networks a:hover .tooltip {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+.social-button span {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    background: url(/../images/content/icons/icon-social-media.svg) 50% 50% no-repeat;
+    text-align: center
+}
+.social-button span::after, .social-button span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(/../images/content/icons/icon-social-media-filled.svg) 50% 50% no-repeat;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease
+}
+.social-button .social-networks {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    pointer-events: none
+}
+.social-button .social-networks li {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity .8s ease;
+    transition: opacity .8s ease
+}
+@media (max-width:767px) {
+    .social-button .social-networks li {
+        opacity: 1
+    }
+}
+.social-button .social-networks li:nth-child(1) {
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s
+}
+.social-button .social-networks li:nth-child(2) {
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
+}
+.social-button .social-networks li:nth-child(3) {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s
+}
+.social-button .social-networks a {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease
+}
+@media (max-width:"(min-width:768px)"-1) {
+    .social-button {
+        display: none
+    }
+}
+body.callout-visible .social-button {
+    -webkit-transform: translate3d(0, -80px, 0);
+    transform: translate3d(0, -80px, 0)
+}
+@-webkit-keyframes heart1 {
+    from {
+        -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
+        transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
+        opacity: 0
+    }
+}
+@keyframes heart1 {
+    from {
+        -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
+        transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
+        opacity: 0
+    }
+}
+@-webkit-keyframes heart2 {
+    from {
+        -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
+        transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
+        opacity: 0
+    }
+}
+@keyframes heart2 {
+    from {
+        -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
+        transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
+        opacity: 0
+    }
+}
