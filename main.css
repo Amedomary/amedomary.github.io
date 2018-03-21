@@ -1,0 +1,60 @@
+.hearth {
+    transform: translate3d(0, 0, 0);
+    transition: transform .8s ease-in-out;
+}
+
+.hearth:hover span::before {
+    opacity: 1;
+    animation: heart1 1.49s ease .3s infinite
+}
+
+.hearth:hover span::after {
+    opacity: 1;
+    animation: heart2 1.49s ease 590ms infinite
+}
+
+.hearth span {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    background: url(http://www.thegaragesociety.com/static/images/content/icons/icon-social-media-filled.svg) 50% 50% no-repeat;
+    text-align: center
+}
+
+.hearth span::after, .hearth span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(http://www.thegaragesociety.com/static/images/content/icons/icon-social-media-filled.svg) 50% 50% no-repeat;
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease
+}
+
+@keyframes heart1 {
+    from {
+        transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        opacity: 1
+    }
+    to {
+        transform: translate3d(-4px, -30px, 0) scale(.6) rotate(-40deg);
+        opacity: 0
+    }
+}
+
+@keyframes heart2 {
+    from {
+        transform: translate3d(0, 0, 0) scale(1) rotate(0);
+        opacity: 1
+    }
+    to {
+        transform: translate3d(4px, -20px, 0) scale(.6) rotate(20deg);
+        opacity: 0
+    }
+}
+/* !Сердечки */
