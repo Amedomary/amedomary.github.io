@@ -17,5 +17,6 @@ require.config({
 //- Модули, подключаемые на всех страницах
 require([
     'modernizr',
-    'ofi'
+    'ofi',
+    'partials/menu',
 ]);
