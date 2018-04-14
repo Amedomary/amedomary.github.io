@@ -7,25 +7,25 @@
 
 define(['jquery'], function ($) {
 
-    var $hamburgerButton = $('.js-hamburger');
+    // var $hamburgerButton = $('.js-hamburger');
 
-    // клик на гамбургер
-    $hamburgerButton.on('click', function () {
-        // Если гамбургер закрыт
-        if ($hamburgerButton.hasClass('close')) {
-            $hamburgerButton.removeClass('close');
-            $hamburgerButton.addClass('open');
-        }
-        // Если гамбургер открыт
-        else if ($hamburgerButton.hasClass('open')) {
-            $hamburgerButton.removeClass('open');
-            $hamburgerButton.addClass('close');
-        }
-        // если гамбургер ещё не трогали
-        else {
-            $hamburgerButton.addClass('open');
-        }
-    });
+    // // клик на гамбургер
+    // $hamburgerButton.on('click', function () {
+    //     // Если гамбургер закрыт
+    //     if ($hamburgerButton.hasClass('close')) {
+    //         $hamburgerButton.removeClass('close');
+    //         $hamburgerButton.addClass('open');
+    //     }
+    //     // Если гамбургер открыт
+    //     else if ($hamburgerButton.hasClass('open')) {
+    //         $hamburgerButton.removeClass('open');
+    //         $hamburgerButton.addClass('close');
+    //     }
+    //     // если гамбургер ещё не трогали
+    //     else {
+    //         $hamburgerButton.addClass('open');
+    //     }
+    // });
 
 
 
@@ -33,7 +33,6 @@ define(['jquery'], function ($) {
 
 
     // !menu code
-
     var $page = $('.b-page-wrapper');
     var $popUp = $('.b-popup');
     var $popUpContent = $('.b-popup__content');
