@@ -24,7 +24,7 @@
 <meta property="og:description" content="Hello. Today I want to present you my updated site where there is a lot of interesting.">
 <meta property="og:url" content="https://amedomary.github.io/">
     <!-- styles--><script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48625547 = new Ya.Metrika({ id:48625547, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48625547" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <link href="css/main.css?1525019791603" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/main.css?1525019787874" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
     <!-- page settings-->
     <title>form</title>
     <meta name="description" content=""><!--[if lte IE 9]>
@@ -32,7 +32,7 @@
   </head>
   <body>
     <div class="b-page-wrapper b-page-wrapper--scroll">
-      <div class="b-header b-header--no-back">
+      <div class="b-header b-header--no-back b-header--only-top">
         <div class="b-header__top-line">
           <div class="b-container"><a class="b-header__logo" href="/" title="" aria-label="Homepage">Home</a>
           </div>
@@ -40,37 +40,67 @@
       </div>
       <main class="b-main b-main--content b-main--blue" role="main">
         <div class="b-container">
-            <h1 class="b-title">Form-test-pagE
+            <h1 class="b-title">Calculator
             </h1>
-          <div class="b-form">
-            <form action="">
-              <fieldset class="b-form__fieldset">
-                <legend class="b-form__legend">Name legend
-                </legend>
-                <div class="b-form__input-area"><input class="b-form__input" type="text" required="" placeholder=" " id="id-input-1"/>
-                  <label class="b-form__label" for="id-input-1">Name
-                  </label>
+          <div class="calculator calculator_js_inited">
+            <div class="calculator__wrapper">
+              <div class="calculator__screen">
+                <div class="calculator-display">
+                  <div class="calculator-display__error">Ошибка</div>
+                  <div class="calculator-display__output"><span class="calculator-display__input-string">Введённый аргумент</span><span class="link link_pseudo_yes" data-bem="ink&quot;:{}}" tabindex="0" role="button">
+                      <div class="calculator-display__input-link"></div></span><span class="calculator-display__equal"> = </span><span class="calculator-display__result">Результат</span></div>
                 </div>
-                <div class="b-form__input-area"><input class="b-form__input" type="text" required="" placeholder=" " id="id-input-2"/>
-                  <label class="b-form__label" for="id-input-2">Email
-                  </label>
+                <div class="input__box">
+                  <input class="input__control" name="" placeholder="0" value="" autofocus="">
                 </div>
-                <div class="b-form__input-area"><input class="b-form__input" type="password" required="" placeholder=" " id="id-input-3"/>
-                  <label class="b-form__label" for="id-input-3">Password
-                  </label>
+              </div>
+              <div class="calculator__btns clearfix">
+                <div class="calculator__row">
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">x<span class="calculator__sup">y</span></span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">x!</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">±</span></button>
+                  <button class="button" data-value="clear" autocomplete="off" tabindex="0"><span class="button__text">C</span></button>
+                  <button class="button" autocomplete="off" tabindex="0"><span class="button__text">( )</span></button>
+                  <button class="button" data-value="%" autocomplete="off" tabindex="0"><span class="button__text">%</span></button>
+                  <button class="button button--yellow" data-value="/" autocomplete="off" tabindex="0"><span class="button__text">÷</span></button>
                 </div>
-              </fieldset>
-              <fieldset class="b-form__fieldset">
-                <legend class="b-form__legend">Name 2 legend
-                </legend>
-                <div class="b-form__input-area"><input class="b-form__input" type="text" required="" placeholder=" " id="id-input-4"/>
-                  <label class="b-form__label" for="id-input-4">Label for input
-                  </label>
+                <div class="calculator__row">
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">asin</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">sin</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">1/x</span></button>
+                  <button class="button" data-value="7" autocomplete="off" tabindex="0"><span class="button__text">7</span></button>
+                  <button class="button" data-value="8" autocomplete="off" tabindex="0"><span class="button__text">8</span></button>
+                  <button class="button" data-value="9" autocomplete="off" tabindex="0"><span class="button__text">9</span></button>
+                  <button class="button button--yellow" data-value="*" autocomplete="off" tabindex="0"><span class="button__text">×</span></button>
                 </div>
-              </fieldset>
-                <button class="b-button">Кнопоська
-                </button>
-            </form>
+                <div class="calculator__row">
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">acos</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">cos</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">√</span></button>
+                  <button class="button" data-value="4" autocomplete="off" tabindex="0"><span class="button__text">4</span></button>
+                  <button class="button" data-value="5" autocomplete="off" tabindex="0"><span class="button__text">5</span></button>
+                  <button class="button" data-value="6" autocomplete="off" tabindex="0"><span class="button__text">6</span></button>
+                  <button class="button button--yellow" data-value="-" autocomplete="off" tabindex="0"><span class="button__text">−</span></button>
+                </div>
+                <div class="calculator__row">
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">atan</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">tan</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">ln</span></button>
+                  <button class="button" data-value="1" autocomplete="off" tabindex="0"><span class="button__text">1</span></button>
+                  <button class="button" data-value="2" autocomplete="off" tabindex="0"><span class="button__text">2</span></button>
+                  <button class="button" data-value="3" autocomplete="off" tabindex="0"><span class="button__text">3</span></button>
+                  <button class="button button--yellow" data-value="+" autocomplete="off" tabindex="0"><span class="button__text">+</span></button>
+                </div>
+                <div class="calculator__row">
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">lg</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">π</span></button>
+                  <button class="button button--gray" autocomplete="off" tabindex="0"><span class="button__text">e</span></button>
+                  <button class="button button--size-l" data-value="0" autocomplete="off" tabindex="0"><span class="button__text">0</span></button>
+                  <button class="button" data-value="." autocomplete="off" tabindex="0"><span class="button__text">,</span></button>
+                  <button class="button button--yellow" data-value="equal" autocomplete="off" tabindex="0"><span class="button__text">=</span></button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -169,6 +199,6 @@
                 </div>
           </div>
         </div>
-    <script src="js/require.js?1525019791637" data-main="js/form"></script>
+    <script src="js/require.js?1525019787923" data-main="js/form"></script>
   </body>
 </html>
