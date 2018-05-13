@@ -9,3 +9,6 @@ v1.0.3
 ### 29.04.2018:
 v1.1.0 -add all pages and calculator
 v1.1.1 -fix template and jsCalculator
+
+### 13.05.2018:
+v2.0.0. -new alfa pages
