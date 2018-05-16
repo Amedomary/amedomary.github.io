@@ -12,3 +12,6 @@ v1.1.1 -fix template and jsCalculator
 
 ### 13.05.2018:
 v2.0.0. -new alfa pages
+
+### 16.05.2018
+v2.0.1 -new backgrounds
