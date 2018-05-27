@@ -1,0 +1,1 @@
+define(["jquery","animejs"],function(t,e){var a,i=t(".js-swap-theme");i.click(function(e){a=t(this).attr("data-color-theme"),t("html").attr("data-theme",a)})});

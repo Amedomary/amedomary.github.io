@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui, user-scalable=no">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#111011">
+    <meta name="msapplication-navbutton-color" content="#111011">
+    <meta name="apple-mobile-web-app-status-bar-style" content="dark">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ff7a20">
+    <meta name="theme-color" content="#ffffff"><meta property="og:image" content="images/inhtml/og-image.jpg">
+<meta property="og:image:width" content="1351">
+<meta property="og:image:height" content="707">
+<meta property="og:title" content="Amedomary's site.">
+<meta property="og:description" content="Hello. Today I want to present you my updated site where there is a lot of interesting.">
+<meta property="og:url" content="https://amedomary.github.io/">
+<script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48625547 = new Ya.Metrika({ id:48625547, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48625547" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <link href="css/main.css?1527449496009" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
+    <!-- page settings-->
+    <title>css-var</title>
+    <meta name="description" content=""><!--[if lte IE 9]>
+    <script src="js/html5shiv/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- общий класс для тестов-->
+    <div class="b-css">
+      <div class="b-css__wrapper">
+        <h1 class="b-css__heading">Css vars and color-theme for site:
+        </h1>
+        <p class="b-css__sub-heading">Maxim G.
+        </p>
+        <div class="b-css__paragraph">
+          <p>Как это работает: </p>
+          <p>Кликаем по кнопочкам</p>
+          <p><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="1">1-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="2">2-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="3">3-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="4">4-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="5">5-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="6">6-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="7">7-theme</a>
+          </p>
+        </div>
+        <h4 class="b-css__heading">А работает это давольно просто.
+        </h4>
+        <div class="b-css__paragraph">
+          <p>Создаём базовый цвет который будет меняться. Привязываем его к data-theme на html.</p>
+          <div class="b-css__light-box">
+            <pre>html[data-theme='green'] {
+    --theme-color: 110;
+}
+</pre>
+          </div>
+          <p>Теперь нам нужны сами цвета. А точнее их яркость и насыщеность. Для этого будем использовать схему hsl. Помещаем все переменные в :root.</p>
+          <div class="b-css__light-box">
+            <pre>:root {
+    --color: ~'hsl(var(--theme-color), 15%, 44%)';
+    --color-link: ~'hsl(var(--theme-color), 55%, 80%)';
+    --color-hover: ~'hsl(var(--theme-color), 45%, 70%)';
+    --background-color: ~'hsl(var(--theme-color), 30%, 10%)';
+}
+</pre>
+          </div>
+          <p>Ну вот. Дело за малым. Хватаем нужный элемент и применяем к нему нашу переменную.</p>
+          <div class="b-css__light-box">
+            <pre>.class-name {
+    color: var(--color);
+    background-color: var(--background-color);
+}
+</pre>
+          </div>
+        </div>
+        <h5 class="b-css__heading">Links:
+        </h5>
+        <div class="b-css__paragraph"><a href="https://medium.com/@mwichary/dark-theme-in-a-day-3518dde2955a" target="_blank" title="Посмотреть оригинал">За идею спасибо Marcin Wichary</a>
+        </div>
+      </div>
+    </div>
+    <script src="js/require.js?1527449496020" data-main="js/css_var"></script>
+  </body>
+</html>

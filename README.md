@@ -18,3 +18,9 @@ v2.0.1 -new backgrounds
 
 ### 27.05.2018
 v2.1.0 -test .php
+
+### 27.05.2018
+v2.1.1 -delete.php
+
+### 27.05.2018
+v2.2.0 -add css vars
