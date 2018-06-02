@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="1">
+<html lang="ru" data-theme-color="1" data-theme-style="normal">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui, user-scalable=no">
@@ -21,7 +21,7 @@
 <meta property="og:description" content="Hello. Today I want to present you my updated site where there is a lot of interesting.">
 <meta property="og:url" content="https://amedomary.github.io/">
 <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48625547 = new Ya.Metrika({ id:48625547, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48625547" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <link href="css/main.css?1527449496009" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/main.css?1527937835638" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
     <!-- page settings-->
     <title>css-var</title>
     <meta name="description" content=""><!--[if lte IE 9]>
@@ -36,10 +36,18 @@
         <p class="b-css__sub-heading">Maxim G.
         </p>
         <div class="b-css__paragraph">
-          <p>Как это работает: </p>
-          <p>Кликаем по кнопочкам</p>
-          <p><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="1">1-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="2">2-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="3">3-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="4">4-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="5">5-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="6">6-theme</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-color-theme="7">7-theme</a>
-          </p>
+          <div>
+            <h4 class="b-css__heading">Цветовые схемы:
+            </h4>
+            <p><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-color="1">Green</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-color="2">Blue</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-color="3">Orange</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-color="4">Purpure</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-color="5">Yellow</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-color="6">Water</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-color="7">Deep sea</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-color="8">Under green</a>
+            </p>
+          </div>
+          <div>
+            <h4 class="b-css__heading">Контрастные Темы:
+            </h4>
+            <p> <a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-style="normal">Normal</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-style="dark">Dark</a><a class="b-css__button js-swap-theme" href="javascript:void(0);" title="" data-theme-style="light">Light</a>
+            </p>
+          </div>
         </div>
         <h4 class="b-css__heading">А работает это давольно просто.
         </h4>
@@ -55,8 +63,6 @@
           <div class="b-css__light-box">
             <pre>:root {
     --color: ~'hsl(var(--theme-color), 15%, 44%)';
-    --color-link: ~'hsl(var(--theme-color), 55%, 80%)';
-    --color-hover: ~'hsl(var(--theme-color), 45%, 70%)';
     --background-color: ~'hsl(var(--theme-color), 30%, 10%)';
 }
 </pre>
@@ -69,6 +75,29 @@
 }
 </pre>
           </div>
+          <p>Теперь будем менять контрастность. Заменяем :root на html[с атрибутом].</p>
+          <div class="b-css__light-box">
+            <pre>// :root = html
+html {
+    &[data-theme-style='normal'] { }
+    &[data-theme-style='dark'] { }
+}
+</pre>
+          </div>
+          <p>Теперь для каждой темы берём свои s,l значения.</p>
+          <div class="b-css__light-box">
+            <pre>html {
+    &[data-theme-style='normal'] {
+        --color: ~'hsl(var(--theme-color), 15%, 44%)';
+        --background-color: ~'hsl(var(--theme-color), 30%, 10%)';
+    }
+    &[data-theme-style='dark'] {
+        --color: ~'hsl(var(--theme-color), 70%, 31%)';
+        --background-color: ~'hsl(var(--theme-color), 3%, 3%)';
+    }
+}
+</pre>
+          </div>
         </div>
         <h5 class="b-css__heading">Links:
         </h5>
@@ -76,6 +105,6 @@
         </div>
       </div>
     </div>
-    <script src="js/require.js?1527449496020" data-main="js/css_var"></script>
+    <script src="js/require.js?1527937835654" data-main="js/css_var"></script>
   </body>
 </html>

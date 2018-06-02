@@ -24,3 +24,6 @@ v2.1.1 -delete.php
 
 ### 27.05.2018
 v2.2.0 -add css vars
+
+### 2.06.2018
+v2.2.1 -add new css vars

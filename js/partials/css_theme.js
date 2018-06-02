@@ -1,1 +1,1 @@
-define(["jquery","animejs"],function(t,e){var a,i=t(".js-swap-theme");i.click(function(e){a=t(this).attr("data-color-theme"),t("html").attr("data-theme",a)})});
+define(["jquery","animejs"],function(t,e){var a,h,m=t(".js-swap-theme");m.click(function(e){a=t(this).attr("data-theme-color"),t("html").attr("data-theme-color",a),h=t(this).attr("data-theme-style"),t("html").attr("data-theme-style",h)})});
