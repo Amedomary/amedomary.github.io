@@ -31,3 +31,4 @@ v2.2.3 -add poster
 
 ### 11.06.2018
 v2.3.0 -add new animation
+v2.4.0 -add new page landing (clock)
