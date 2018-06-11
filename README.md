@@ -28,3 +28,6 @@ v2.2.0 -add css vars
 ### 2.06.2018
 v2.2.1 -add new css vars
 v2.2.3 -add poster
+
+### 11.06.2018
+v2.3.0 -add new animation
