@@ -1,1 +1,1 @@
-require(["./config"],function(){require([])});
+require(["./config"],function(){require(["partials/clock"])});
