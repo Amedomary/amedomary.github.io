@@ -37,3 +37,6 @@ v2.4.0 -add new page landing (clock)
 v2.4.1 -add js clock
 v2.4.2 -fix
 v2.4.3 -fix
+
+### 28.06.2018
+v2.4.4 -add rus text, add more small circles
