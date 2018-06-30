@@ -21,14 +21,14 @@
 <meta property="og:description" content="Hello. Today I want to present you my updated site where there is a lot of interesting.">
 <meta property="og:url" content="https://amedomary.github.io/">
 <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48625547 = new Ya.Metrika({ id:48625547, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48625547" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <link href="css/main.css?1530300029224" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/main.css?1530370804067" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
     <!-- page settings-->
     <title>landing</title>
     <meta name="description" content=""><!--[if lte IE 9]>
     <script src="js/html5shiv/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
-    <div class="b-landing"><img class="b-landing__background" src="images/content/flower.jpg" alt="" title="" role="presentation"/>
+    <div class="b-landing" id="landing-app" :class="vueAppClass"><img class="b-landing__background" src="images/content/flower.jpg" alt="" title="" :class="vueBackClass" role="presentation"/>
       <svg class="b-svg-grid">
         <g>
           <line class="b-svg-grid__line b-svg-grid__line--mobile-hide" x1="20%" y1="0" x2="20%" y2="100%">
@@ -143,7 +143,7 @@
           </rect>
         </g>
       </svg>
-      <svg class="b-landing__circle" x="0px" y="0px" viewBox="0 0 705 705"><circle class="st0" cx="352.5" cy="352.5" r="350.5"/>
+      <svg class="b-landing__circle" x="0px" y="0px" viewBox="0 0 705 705" :class="vueCircleClass"><circle class="st0" cx="352.5" cy="352.5" r="350.5"/>
 <circle class="st1" cx="352.5" cy="352.5" r="225.5"/>
 <circle class="st2" cx="70" cy="352.5" r="4"/>
 <circle class="st3" cx="70" cy="352.5" r="5"/>
@@ -152,7 +152,7 @@
       </svg>
       <div class="b-landing__clock"><span class="b-landing__month" id="js-clock-mounth">Mouth 00</span><span class="b-landing__hour" id="js-clock-hour">00</span><span class="b-landing__slash">/ </span><span class="b-landing__minutes" id="js-clock-minutes">00</span><span class="b-landing__minutes">:</span><span class="b-landing__minutes" id="js-clock-seconds">00</span>
       </div>
-      <div class="b-landing__header"><a class="b-landing__link-create" href="javascript:void(0)" title=""><span>create its  </span><b>own </b></a>
+      <div class="b-landing__header"><a class="b-landing__link-create" @click="createTimer" href="javascript:void(0)" title=""><span v-if="createTimerShow"><span>Создать   </span><b>свой </b></span><span v-else v-cloak><span>Отмена  </span></span></a>
       </div>
       <div class="b-landing__description">
         <h2 class="b-landing__pre-heading">Жди вместе с друзьями
@@ -160,11 +160,11 @@
         <h1 class="b-landing__heading">Запусти свой таймер
         </h1>
         <p class="b-landing__description-text">На этом сайте ты можешь создайть таймер отсчёта до твоего события и поделиться с друзьями :) 
-        </p><a class="b-button b-button--flower" href="javascript:void(0);" title="">Подписаться</a>
+        </p><a class="b-button b-button--flower" href="javascript:void(0);" title="" :class="vueButtonClass">Добавить в календарь</a>
       </div>
-      <div class="b-landing__share"><a class="b-icon b-icon--share icon-fb" href="javascript:void(0)" title=""></a><a class="b-icon b-icon--share icon-insta" href="javascript:void(0)" title=""></a>
+      <div class="b-landing__share" :class="vueShareClass"><a class="b-icon b-icon--share icon-fb" href="javascript:void(0)" title=""></a><a class="b-icon b-icon--share icon-insta" href="javascript:void(0)" title=""></a>
       </div>
     </div>
-    <script src="js/require.js?1530300029274" data-main="js/landing"></script>
+    <script src="js/require.js?1530370804125" data-main="js/landing"></script>
   </body>
 </html>

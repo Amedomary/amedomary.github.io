@@ -43,3 +43,6 @@ v2.4.4 -add rus text, add more small circles
 
 ### 29.06.2018
 v2.4.5 -add mobile / fix
+
+#30.06.2018
+v3.0.0 -add vue and first state modif for timer

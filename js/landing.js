@@ -1,1 +1,1 @@
-require(["./config"],function(){require(["partials/clock"])});
+require(["./config"],function(){require(["partials/clock","partials/landing-vue"])});
