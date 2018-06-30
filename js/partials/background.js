@@ -1,1 +1,66 @@
-define(["jquery"],function(a){function s(){v.addClass("disable"),v.text(u),v.css("background-color","transparent")}function e(){v.removeClass("disable"),v.text(C),v.css("background-color",o),v.attr("href",r)}var t,o,r,c=a(".js-background-link"),i=a(".js-background-link").parent(),n=a(".js-background"),l=a(".js-background-wrapper"),d=a(".js-background-link-close"),v=a(".js-main-nav"),u="Выберите раздел...",C="Смотреть подробнее";c.on("click",function(){t=a(".js-background[data-background='"+a(this).attr("data-background")+"']"),o=a(this).attr("data-color"),r=a(this).attr("data-href"),t.hasClass("show")||(c.removeClass("active"),i.removeClass("active-li"),a(this).addClass("active"),a(this).parent().addClass("active-li"),l.addClass("active"),n.removeClass("show"),t.addClass("show"),d.addClass("active"),e())}),d.on("click",function(){l.removeClass("active"),c.removeClass("active"),n.removeClass("show"),i.removeClass("active-li"),a(this).removeClass("active"),s()})});
+// ====================
+// robinzon: popup.js
+// 15.01.2018: Amedomary
+// ---------------------
+// Открытие попАпа и запрет скрола на body
+// ====================
+
+define(['jquery'], function ($) {
+
+    var $backgroundLink = $('.js-background-link'); // Ссылка на картинку
+    var $listItemLink = $('.js-background-link').parent();
+    var $backgroundImage = $('.js-background'); //картинка
+    var $backgroundWrapper = $('.js-background-wrapper'); //обёртка фонов
+    var $backgroundClose = $('.js-background-link-close'); //Кнопка очистки слайдера
+    var $backgroundImageData; // Дата для фона
+    var $mainNavButton = $('.js-main-nav'); //кнопочка для переходу на страницу
+    var textBefore    = 'Выберите раздел...'; //текст До
+    var textAfter = 'Смотреть подробнее'; //текст После
+    var colorButtonData; // Цвет для кнопки из ссылки
+    var dataHrefMainNavigation; //дата для передачи ссылки в другую кнопку
+    // Дизейблит кнопку перехода на др страницу
+    function disableNavButton() {
+        $mainNavButton.addClass('disable');
+        $mainNavButton.text(textBefore);
+        $mainNavButton.css('background-color', 'transparent');
+    }
+    // Активирует кнопку перехода на др страницу
+    function enableNavButton() {
+        $mainNavButton.removeClass('disable');
+        $mainNavButton.text(textAfter);
+        $mainNavButton.css('background-color', colorButtonData);
+        $mainNavButton.attr('href', dataHrefMainNavigation);
+    }
+
+    // клик по ссылке для фона
+    $backgroundLink.on('click', function () {
+        $backgroundImageData = $('.js-background[data-background=\'' + ($(this).attr('data-background')) + '\']'); // Забираем дату из ссылки клика и закидываем в переменную картинки
+        colorButtonData = $(this).attr('data-color'); // Забираем цвет фона кнопки из даты
+        dataHrefMainNavigation = $(this).attr('data-href'); // забираем адресс ссылки из даты
+
+        // Если картинка со ссылкой ещё не октрыты (не совпадает ссылка с открытой фоткой)
+        if (!($backgroundImageData.hasClass('show'))) {
+            // делаем кнопку и li активной
+            $backgroundLink.removeClass('active');
+            $listItemLink.removeClass('active-li');
+            $(this).addClass('active');
+            $(this).parent().addClass('active-li');
+            $backgroundWrapper.addClass('active'); // Добавляем обёртке атив
+            $backgroundImage.removeClass('show'); // скрываем все фоны
+            $backgroundImageData.addClass('show'); // показываем конкретный фон
+            $backgroundClose.addClass('active'); // показываем кнопку закрыть
+            enableNavButton()
+        }
+    });
+
+    // Кликаем по закрывашки фона
+    $backgroundClose.on('click', function() {
+        $backgroundWrapper.removeClass('active');
+        $backgroundLink.removeClass('active');
+        $backgroundImage.removeClass('show');
+        $listItemLink.removeClass('active-li');
+        $(this).removeClass('active');
+        disableNavButton();
+    });
+
+});

@@ -1,1 +1,47 @@
-define(["jquery"],function(t){function e(){n=new Date;var t=n.toLocaleString("en-US",{month:"long"}),e=n.getDate(),u=n.getHours().toString(),d=n.getMinutes().toString(),m=n.getSeconds().toString();u.length<2&&(u="0"+u),d.length<2&&(d="0"+d),m.length<2&&(m="0"+m),o.textContent=t+" "+e,c.textContent=u,g.textContent=d,l.textContent=m}var n,o=document.getElementById("js-clock-mounth"),c=document.getElementById("js-clock-hour"),g=document.getElementById("js-clock-minutes"),l=document.getElementById("js-clock-seconds");e(),setInterval(e,1e3)});
+// ====================
+// 15.01.2018: Amedomary
+// ---------------------
+// Часы
+// ====================
+
+define(['jquery'], function ($) {
+
+    var $clockMouth = document.getElementById('js-clock-mounth');
+    var $clockHour = document.getElementById('js-clock-hour');
+    var $clockMinutes = document.getElementById('js-clock-minutes');
+    var $clockSeconds = document.getElementById('js-clock-seconds');
+
+    var dataTime;
+
+    function clock() {
+        // создаём дату новую
+        dataTime = new Date();
+
+        var mon = dataTime.toLocaleString('en-US', { month: "long" });// выводим месяц в формате длинный экма Англ стандарт
+        var d = dataTime.getDate(); // получаем число месяца
+        var h = dataTime.getHours().toString(); // получаем час и переводим в строку 
+        var m = dataTime.getMinutes().toString(); // получаем минуту и переводим в строку
+        var s = dataTime.getSeconds().toString(); // получаем секунду и переводим в строку
+
+        // добавляем 0 в начало однозначного элемента
+        if (h.length < 2) {
+            h = '0' + h;
+        }
+        if (m.length < 2) {
+            m = '0' + m;
+        }
+        if (s.length < 2) {
+            s = '0' + s;
+        }
+
+        // меняем контент
+        $clockMouth.textContent = mon + ' ' + d;
+        $clockHour.textContent = h;
+        $clockMinutes.textContent = m;
+        $clockSeconds.textContent = s;
+    }
+
+    // запускаем и повторяем раз в секнуду
+    clock();
+    setInterval(clock, 1000);
+});
