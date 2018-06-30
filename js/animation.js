@@ -1,1 +1,5 @@
-require(["./config"],function(){require(["partials/animation"])});
+require(['./config',], function() {
+    require([
+        'partials/animation',
+    ]);
+});

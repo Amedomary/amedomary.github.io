@@ -20,7 +20,7 @@
 <meta property="og:title" content="Amedomary's site.">
 <meta property="og:description" content="Hello. Today I want to present you my updated site where there is a lot of interesting.">
 <meta property="og:url" content="https://amedomary.github.io/">
-    <link href="css/main.css?1530372188455" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/main.css?1530388355904" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
     <!-- page settings-->
     <title>landing</title>
     <meta name="description" content=""><!--[if lte IE 9]>
@@ -142,6 +142,8 @@
           </rect>
         </g>
       </svg>
+      <div class="b-landing__header"><a class="b-landing__link-create" @click="createTimer" href="javascript:void(0)" title=""><span v-if="createTimerShow" v-cloak><span>Отмена  </span></span><span v-else><span>Создать    </span><b>свой </b></span></a>
+      </div>
       <svg class="b-landing__circle" x="0px" y="0px" viewBox="0 0 705 705" :class="vueCircleClass"><circle class="st0" cx="352.5" cy="352.5" r="350.5"/>
 <circle class="st1" cx="352.5" cy="352.5" r="225.5"/>
 <circle class="st2" cx="70" cy="352.5" r="4"/>
@@ -149,9 +151,7 @@
 <circle class="st4" cx="70" cy="352.5" r="3"/>
 <circle class="st5" cx="70" cy="352.5" r="6"/>
       </svg>
-      <div class="b-landing__clock"><span class="b-landing__month" id="js-clock-mounth">Mouth 00</span><span class="b-landing__hour" id="js-clock-hour">00</span><span class="b-landing__slash">/ </span><span class="b-landing__minutes" id="js-clock-minutes">00</span><span class="b-landing__minutes">:</span><span class="b-landing__minutes" id="js-clock-seconds">00</span>
-      </div>
-      <div class="b-landing__header"><a class="b-landing__link-create" @click="createTimer" href="javascript:void(0)" title=""><span v-if="createTimerShow"><span>Создать   </span><b>свой </b></span><span v-else v-cloak><span>Отмена  </span></span></a>
+      <div class="b-landing__clock" :class="vueClockClass" @click="editClock"><span class="b-landing__month" id="js-clock-mounth">Mounth</span><span class="b-landing__hour" id="js-clock-hour">12</span><span class="b-landing__slash">/ </span><span class="b-landing__minutes" id="js-clock-minutes">45</span><span class="b-landing__minutes">:</span><span class="b-landing__minutes" id="js-clock-seconds">07</span><i class="b-icon b-icon--clock-edit icon-pen-solid"></i>
       </div>
       <div class="b-landing__description">
         <h2 class="b-landing__pre-heading">Жди вместе с друзьями
@@ -164,6 +164,6 @@
       <div class="b-landing__share" :class="vueShareClass"><a class="b-icon b-icon--share icon-fb" href="javascript:void(0)" title=""></a><a class="b-icon b-icon--share icon-insta" href="javascript:void(0)" title=""></a>
       </div>
     </div>
-    <script src="js/require.js?1530372188475" data-main="js/landing"></script>
+    <script src="js/require.js?1530388355947" data-main="js/landing"></script>
   </body>
 </html>

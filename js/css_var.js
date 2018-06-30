@@ -1,1 +1,5 @@
-require(["./config"],function(){require(["partials/css_theme"])});
+require(['./config',], function () {
+    require([
+        'partials/css_theme'
+    ]);
+});

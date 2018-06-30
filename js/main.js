@@ -1,1 +1,5 @@
-require(["./config"],function(){require(["partials/background"])});
+require(['./config',], function() {
+    require([
+        'partials/background'
+    ]);
+});
