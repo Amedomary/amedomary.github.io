@@ -49,3 +49,6 @@ v3.0.0 -add vue and first state modif for timer
 
 #30.06.2018
 v3.0.1 -fix js.clock / add vue for edit clock
+
+#1.07.2018
+v3.0.2 -add input heading

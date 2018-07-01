@@ -20,7 +20,7 @@
 <meta property="og:title" content="Amedomary's site.">
 <meta property="og:description" content="Hello. Today I want to present you my updated site where there is a lot of interesting.">
 <meta property="og:url" content="https://amedomary.github.io/">
-    <link href="css/main.css?1530388355904" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/main.css?1530473712478" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
     <!-- page settings-->
     <title>landing</title>
     <meta name="description" content=""><!--[if lte IE 9]>
@@ -156,14 +156,14 @@
       <div class="b-landing__description">
         <h2 class="b-landing__pre-heading">Жди вместе с друзьями
         </h2>
-        <h1 class="b-landing__heading">Запусти свой таймер
-        </h1>
-        <p class="b-landing__description-text">На этом сайте ты можешь создайть таймер отсчёта до твоего события и поделиться с друзьями :) 
+        <h1 class="b-landing__heading" :class="vueHeadingClass" v-if="!stateEditHeading" @click="editHeading" v-cloak="v-cloak">{{ headingMessage }}<i class="b-icon b-icon--heading-edit icon-pen-solid"></i>
+        </h1><input class="b-landing__heading" id="" type="text" placeholder="Ваш заголовок" name="" value="" autofocus="autofocus" v-else="v-else" v-model="headingMessage" v-cloak="v-cloak"/>
+        <p class="b-landing__description-text">На этом сайте ты можешь создайть таймер отсчёта до твоего события и поделиться с друзьями :)
         </p><a class="b-button b-button--flower" href="javascript:void(0);" title="" :class="vueButtonClass">Добавить в календарь</a>
       </div>
       <div class="b-landing__share" :class="vueShareClass"><a class="b-icon b-icon--share icon-fb" href="javascript:void(0)" title=""></a><a class="b-icon b-icon--share icon-insta" href="javascript:void(0)" title=""></a>
       </div>
     </div>
-    <script src="js/require.js?1530388355947" data-main="js/landing"></script>
+    <script src="js/require.js?1530473712578" data-main="js/landing"></script>
   </body>
 </html>

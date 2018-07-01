@@ -15,8 +15,14 @@ define(['jquery', 'vuejs'], function ($, Vue) {
             vueCircleClass: '',
             vueButtonClass: '',
             vueClockClass: '',
+            vueHeadingClass: '',
 
-            stateWasModified: false // было ло ли изменено состояние
+            stateWasModified: false, // было ло ли изменено состояние
+
+            stateEditHeading: false, // изменяется ли Заголовок
+
+            headingMessage: 'Запусти свой таймер', // текст заголовка
+            oldHeadingMessage: '', // ячейка для сохранения предыдущего текста
 
         },
         methods: {
@@ -31,20 +37,44 @@ define(['jquery', 'vuejs'], function ($, Vue) {
                     this.vueCircleClass = 'fade',
                     this.vueButtonClass = 'fade',
                     this.vueClockClass = 'editable' // "editable edited"
+                    this.vueHeadingClass = 'editable' // "editable edited"
                 } else {
                     this.vueAppClass = '',
                     this.vueBackClass = '',
                     this.vueShareClass = '',
                     this.vueCircleClass = '',
                     this.vueButtonClass = '',
-                    this.vueClockClass = ''
+                    this.vueClockClass = '',
+                    this.vueHeadingClass = ''
                 }
             },
+            // Изменяем часы (ставим новую дату)
             editClock: function () {
                 if (this.createTimerShow) {
                     alert('В преАльфа версии эта функция недоступна. Нажмите ок.');
+                    this.vueClockClass = 'editable editing';
                 }
+            },
+            editHeading: function () {
+                // alert('В преАльфа версии эта функция недоступна. Нажмите ок.');
+                // TODO: сохранять старые значения надо и возвращать
+                if (this.createTimerShow) {
+                    this.stateEditHeading = true;
+                    this.headingMessage = '';
+                    // this.vueHeadingClass = 'editable';
+                }
+            },
+            acceptEditHeading : function (e) {
+                alert('document.addEventListener')
             }
+        },
+        // Вызывается синхронно сразу после создания экземпляра
+        created() {
+            document.addEventListener('keypress', this.acceptEditHeading)
+        },
+        // Вызывается синхронно сразу после инициализации экземпляра, до настройки наблюдения за данными, механизмов слежения и событий.
+        beforeDestroy() {
+            document.removeEventListener('keypress', this.acceptEditHeading)
         }
     })
 
