@@ -9,6 +9,8 @@ define(['jquery', 'vuejs'], function ($, Vue) {
         el: '#landing-app',
         data: {
             createTimerShow: false, //состояние редактирования
+
+            // Классы
             vueAppClass: '',
             vueBackClass: '',
             vueShareClass: '',
@@ -18,44 +20,78 @@ define(['jquery', 'vuejs'], function ($, Vue) {
             vueHeadingClass: '',
             vueDescriptionTextClass: '',
 
+            // Consts
+            CONTENTFROMSERVER: {
+                preHeading: 'Жди вместе с друзьями',
+                heading: 'Запусти свой таймер',
+                description: 'На этом сайте ты можешь создайть таймер отсчёта до твоего события и поделиться с друзьями :)'
+            },
+
             stateWasModified: false, // было ло ли изменено состояние
 
             stateEditHeading: false, // изменяется ли Заголовок
             stateEditDescriptionText: false, // изменяется ли Описание
 
-            headingMessage: 'Запусти свой таймер', // текст заголовка
+            headingMessage: '', // текст заголовка
             oldHeadingMessage: '', // ячейка для сохранения предыдущего текста
             newHeadingMessage: '', // ячейка для нового текста
 
-            descriptionTextMessage: 'На этом сайте ты можешь создайть таймер отсчёта до твоего события и поделиться с друзьями :)', // текст описания
+            descriptionTextMessage: '', // текст описания
             oldDescriptionTextMessage: '', // ячейка для сохранения предыдущего описания
             newDescriptionTextMessage: '', // ячейка для нового описания
+
+            preHeadingMessage: '', // текст пред Заголовка
+            oldPreHeadingMessage: '', // ячейка для сохранения предыдущего пред Заголовка
+            newPreHeadingMessage: '' // ячейка для нового пред Заголовка
 
         },
         methods: {
             // Включаем тему редоктирования 
             createTimer: function () {
                 this.createTimerShow = !this.createTimerShow;
+
                 if (this.createTimerShow) {
-                    this.vueAppClass = 'modification',
-                    this.vueBackClass = 'fade',
-                    this.vueShareClass = 'hide',
-                    this.vueCircleClass = 'fade',
-                    this.vueButtonClass = 'fade',
-                    this.vueClockClass = 'editable', // "editable edited"
-                    this.vueHeadingClass = 'editable', // "editable edited"
-                    this.vueDescriptionTextClass = 'editable'
+                    this.vueAppClass = 'modification';
+                    this.vueBackClass = 'fade';
+                    this.vueShareClass = 'hide';
+                    this.vueCircleClass = 'fade';
+                    this.vueButtonClass = 'fade';
+                    this.vueClockClass = 'editable'; // "editable edited"
+                    this.vueHeadingClass = 'editable'; // "editable edited"
+                    this.vueDescriptionTextClass = 'editable';
                 } else {
-                    this.vueAppClass = '',
-                    this.vueBackClass = '',
-                    this.vueShareClass = '',
-                    this.vueCircleClass = '',
-                    this.vueButtonClass = '',
-                    this.vueClockClass = '',
-                    this.vueHeadingClass = '',
-                    this.vueDescriptionTextClass = ''
+                    this.vueAppClass = '';
+                    this.vueBackClass = '';
+                    this.vueShareClass = '';
+                    this.vueCircleClass = '';
+                    this.vueButtonClass = '';
+                    this.vueClockClass = '';
+                    this.vueHeadingClass = '';
+                    this.vueDescriptionTextClass = '';
+                    // присваеваем переменным значения с сервера
+                    this.preHeadingMessage = this.CONTENTFROMSERVER.preHeading;
+                    this.headingMessage = this.CONTENTFROMSERVER.heading;
+                    this.descriptionTextMessage = this.CONTENTFROMSERVER.description;
+
                 }
             },
+
+            // Применяем изменения Приложения
+            acceptCreateTimer: function () {
+                this.createTimerShow = !this.createTimerShow; // меняем состояния редактирования
+                // убиваем классы редактирования
+                this.vueAppClass = '';
+                this.vueBackClass = '';
+                this.vueShareClass = '';
+                this.vueCircleClass = '';
+                this.vueButtonClass = '';
+                this.vueClockClass = '';
+                this.vueHeadingClass = '';
+                this.vueDescriptionTextClass = '';
+                
+                this.stateWasModified = false; //выключаем состояние "в редактировании"
+            },
+
 
             // Изменяем часы (ставим новую дату)
             editClock: function () {
@@ -80,9 +116,12 @@ define(['jquery', 'vuejs'], function ($, Vue) {
             compleateEditHeading: function () {
                 if (this.createTimerShow) {
                     this.stateEditHeading = false;
-                    // если форма пустая
+                    // если форма пустая и не такая же
                     if (this.headingMessage == '') {
                         this.headingMessage = this.oldHeadingMessage;
+                    }
+                    else {
+                        this.stateWasModified = true;
                     }
                 }
             },
@@ -106,29 +145,42 @@ define(['jquery', 'vuejs'], function ($, Vue) {
                     if (this.descriptionTextMessage == '') {
                         this.descriptionTextMessage = this.oldDescriptionTextMessage;
                     }
+                    else {
+                        this.stateWasModified = true;
+                    }
                 }
+            },
+
+            // применить редактирование текста по клавише Энтр
+            acceptEditText: function (e) {
+                // если мы в процесе редактирования и редактируем загаловок и нажали энтер
+                if (this.createTimerShow && this.stateEditHeading && e.key == 'Enter') {
+                    this.compleateEditHeading();
+                }
+                if (this.createTimerShow && this.stateEditDescriptionText && e.key == 'Enter') {
+                    this.compleateEditDescriptionText();
+                }
+                // if (this.createTimerShow && this.stateEditPreHeading && e.key == 'Enter') {
+                //     this.compleateEditPreHeading();
+                // }
+
             }
 
+        },
 
 
-
-
-            // acceptEditHeading : function (e) {
-            //     console.log(e.key);
-            // }
+        // Вызывается синхронно сразу после создания экземпляра
+        created() {
+            // присваеваем переменным значения с сервера
+            this.preHeadingMessage = this.CONTENTFROMSERVER.preHeading;
+            this.headingMessage = this.CONTENTFROMSERVER.heading;
+            this.descriptionTextMessage = this.CONTENTFROMSERVER.description;
+            
+            document.addEventListener('keypress', this.acceptEditText)
         }
 
-
-
-
-
-        // // Вызывается синхронно сразу после создания экземпляра
-        // created() {
-        //     document.addEventListener('keypress', this.acceptEditHeading)
-        // },
         // Вызывается синхронно сразу после инициализации экземпляра, до настройки наблюдения за данными, механизмов слежения и событий.
-        // beforeDestroy() {
-        //     document.removeEventListener('keypress', this.acceptEditHeading)
+        // created() {
         // }
     })
 

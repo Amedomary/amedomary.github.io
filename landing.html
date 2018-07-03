@@ -20,7 +20,7 @@
 <meta property="og:title" content="Amedomary's site.">
 <meta property="og:description" content="Hello. Today I want to present you my updated site where there is a lot of interesting.">
 <meta property="og:url" content="https://amedomary.github.io/">
-    <link href="css/main.css?1530562136774" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/main.css?1530649008841" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Didact+Gothic&amp;subset=cyrillic-ext" rel="stylesheet">
     <!-- page settings-->
     <title>landing</title>
     <meta name="description" content=""><!--[if lte IE 9]>
@@ -142,7 +142,7 @@
           </rect>
         </g>
       </svg>
-      <div class="b-landing__header"><a class="b-landing__link-create" @click="createTimer" href="javascript:void(0)" title=""><span v-if="createTimerShow" v-cloak><span>Отмена  </span></span><span v-else><span>Создать    </span><b>свой </b></span></a>
+      <div class="b-landing__header"><a class="b-landing__link-create" @click="createTimer" href="javascript:void(0)" title=""><span v-if="createTimerShow" v-cloak><span>Отмена  </span></span><span v-else><span>Создать    </span><b>свой </b></span></a><a class="b-landing__link-create b-landing__link-create--accept" @click="acceptCreateTimer" v-if="stateWasModified" href="javascript:void(0)" title=""><span v-cloak>✔ Применить  </span><b v-cloak>изменения  </b></a>
       </div>
       <svg class="b-landing__circle" x="0px" y="0px" viewBox="0 0 705 705" :class="vueCircleClass"><circle class="st0" cx="352.5" cy="352.5" r="350.5"/>
 <circle class="st1" cx="352.5" cy="352.5" r="225.5"/>
@@ -164,6 +164,6 @@
       <div class="b-landing__share" :class="vueShareClass"><a class="b-icon b-icon--share icon-fb" href="javascript:void(0)" title=""></a><a class="b-icon b-icon--share icon-insta" href="javascript:void(0)" title=""></a>
       </div>
     </div>
-    <script src="js/require.js?1530562136803" data-main="js/landing"></script>
+    <script src="js/require.js?1530649008944" data-main="js/landing"></script>
   </body>
 </html>

@@ -55,3 +55,6 @@ v3.0.2 -add input heading
 
 #3.07.2018
 v3.0.3 -add good save edit
+
+#4.07.2018
+v3.0.4 -add save with enter, and button accept/cancle
