@@ -58,3 +58,6 @@ v3.0.3 -add good save edit
 
 #4.07.2018
 v3.0.4 -add save with enter, and button accept/cancle
+
+#22.10.2018
+v4.0.0 -new page for timer
