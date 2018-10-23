@@ -44,20 +44,20 @@ v2.4.4 -add rus text, add more small circles
 ### 29.06.2018
 v2.4.5 -add mobile / fix
 
-#30.06.2018
+### 30.06.2018
 v3.0.0 -add vue and first state modif for timer
 
-#30.06.2018
+### 30.06.2018
 v3.0.1 -fix js.clock / add vue for edit clock
 
-#1.07.2018
+### 1.07.2018
 v3.0.2 -add input heading
 
-#3.07.2018
+### 3.07.2018
 v3.0.3 -add good save edit
 
-#4.07.2018
+### 4.07.2018
 v3.0.4 -add save with enter, and button accept/cancle
 
-#22.10.2018
+### 22.10.2018
 v4.0.0 -new page for timer
