@@ -1,37 +1,8 @@
 // ====================
-// robinzon: popup.js
-// 15.01.2018: Amedomary
-// ---------------------
-// Открытие попАпа и запрет скрола на body
+// меню
 // ====================
 
 define(['jquery'], function ($) {
-
-    // var $hamburgerButton = $('.js-hamburger');
-
-    // // клик на гамбургер
-    // $hamburgerButton.on('click', function () {
-    //     // Если гамбургер закрыт
-    //     if ($hamburgerButton.hasClass('close')) {
-    //         $hamburgerButton.removeClass('close');
-    //         $hamburgerButton.addClass('open');
-    //     }
-    //     // Если гамбургер открыт
-    //     else if ($hamburgerButton.hasClass('open')) {
-    //         $hamburgerButton.removeClass('open');
-    //         $hamburgerButton.addClass('close');
-    //     }
-    //     // если гамбургер ещё не трогали
-    //     else {
-    //         $hamburgerButton.addClass('open');
-    //     }
-    // });
-
-
-
-// 0 - open - close
-
-
     // !menu code
     var $page = $('.b-page-wrapper');
     var $popUp = $('.b-popup');
@@ -104,83 +75,4 @@ define(['jquery'], function ($) {
             }
         }
     });
-
-
-    // ================================ //
-
-    // строка создаётся новой
-    let stroka = 'Old string'
-    // stroka = stroka.charAt(2) + stroka[5]
-    // console.log(stroka);
-
-    // let string = 'Я новая строка';
-    // string = string.toUpperCase;
-
-    // console.log(string);
-    // console.log(string.length); // свойство
-
-    // console.log(string.charAt(2));
-    // console.log(string[2]);
-    // console.log(string.toLowerCase());
-    // console.log(string.toUpperCase());
-    // console.log(string);
-    // console.log(string);
-    // console.log(string);
-    // console.log(string);
-    // console.log(string);
-    // console.log(string);
-    // console.log(string);
-
-    
-    // let string = 'А роза упала на лапу Азора';
-    
-    // // размиваем строку на массив разделителем 'пустота'
-    // console.log(string.split(''));
-    // // меняем порядок на обратный
-    // console.log(string.split('').reverse());
-    // // собираем массив в строку разделителем 'пустота'
-    // console.log(string.split('').reverse().join(''));
-    
-    // console.log(string);
-
-    // console.log(reverseString(string));
-    // console.log(simpleString(string));
-    
-    let string = 'А роза упала на лапу Азора';
-    let string2 = 'А я кто?';
-
-    // Возвращаем перевёрнутую строку
-    function reverseString (e) {
-        return e.toLowerCase().replace(/\s/g, '').split('').reverse().join('');
-    }
-
-    function simpleString(e) {
-        return e.toLowerCase().replace(/\s/g, '');
-    }
-
-    function pallindrom (str) {
-        if (simpleString(str) === reverseString(str)) {
-            return console.log(str + ' - ' + 'Это Паллиндром');
-        } else {
-            return console.log(str + ' - ' + 'Это какая-то дичь');
-        }
-    }
-
-    pallindrom(string);
-    pallindrom(string2);
-    
-
-    
-
-    
-
-
-
-
-
-    
-    // ================================ //
-
 });
-
-
