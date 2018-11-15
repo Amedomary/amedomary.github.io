@@ -25,4 +25,5 @@ require([
     'partials/menu',
     'partials/main_menu',
     'partials/calculator'
+    // 'partials/landing_vue',
 ]);
