@@ -1,6 +1,4 @@
-# Amedomary.github.io
-
-[Watch site](https://amedomary.github.io/)
+# [Amedomary.github.io](https://amedomary.github.io/)
 
 #### April 2018
 
@@ -45,4 +43,4 @@
 #### November 2018
 
 - 21.11.2018 **(v5.0.0)** - new page for myGame
-- 21.11.2018 **(v5.0.1)** - edit readme
+- 21.11.2018 **(v5.0.1/2)** - edit readme
