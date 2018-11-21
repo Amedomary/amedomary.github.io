@@ -39,3 +39,7 @@
 
 - 22.10.2018 **(v4.0.0)** - new page for timer
 - 22.10.2018 **(v4.1.0)** - new main menu, new pic for timer. Some fix
+
+### November 2018
+
+- 21.11.2018 **(v5.0.0)** - new page for myGame
