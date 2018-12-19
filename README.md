@@ -44,3 +44,8 @@
 
 - 21.11.2018 **(v5.0.0)** - new page for myGame
 - 21.11.2018 **(v5.0.1/2)** - edit readme
+
+#### December 2018
+
+- 20.12.2018 **(v6.0.0)** - new text page
+- 20.12.2018 **(v6.0.1)** - new double click event

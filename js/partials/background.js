@@ -96,6 +96,8 @@ define(['jquery'], function ($) {
       $backgroundClose.addClass('active'); // показываем кнопку закрыть
       enableNavButton();
       goInBtnAnimation(event);
+    } else {
+      $mainNavButton[0].click(); // дабл клик для перехода
     }
   });
 
