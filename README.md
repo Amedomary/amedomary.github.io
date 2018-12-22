@@ -49,3 +49,4 @@
 
 - 20.12.2018 **(v6.0.0)** - new text page
 - 20.12.2018 **(v6.0.1)** - new double click event
+- 20.12.2018 **(v6.1.0)** - new colors

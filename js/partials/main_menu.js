@@ -11,10 +11,10 @@ define(['jquery'], function ($) {
   var $mainMenu = $('.js-main-menu');
   var $page = $('.b-page-wrapper');
   var $pageWithScroll = $('.b-page-wrapper--scroll');
-  var windowsOS = (navigator.userAgent.toLowerCase().indexOf('windows') !== -1); // true для Win
-  if ($page.length > 0) {
-    var windowsHasScroll = (windowsOS) && (getScroll('Height', '.b-page-wrapper')); // true Если Page у Windows имеет скролл
-  }
+  // var windowsOS = (navigator.userAgent.toLowerCase().indexOf('windows') !== -1); // true для Win
+  // if ($page.length > 0) {
+  //   var windowsHasScroll = (windowsOS) && (getScroll('Height', '.b-page-wrapper')); // true Если Page у Windows имеет скролл
+  // }
   var scrollWrapper; // положение скрола
 
   // Проверка на наличие скролаа
@@ -32,9 +32,9 @@ define(['jquery'], function ($) {
     $mainMenu.addClass('open');
     $page.addClass('no-scroll no-touch');
     // Если у винды есть скролл
-    if (windowsHasScroll) {
-      $page.addClass('no-jump-windows-os')
-    }
+    // if (windowsHasScroll) {
+    //   $page.addClass('no-jump-windows-os')
+    // }
   }
   // Закрываем меню
   function closeMainMenu() {

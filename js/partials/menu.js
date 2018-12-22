@@ -9,8 +9,7 @@ define(['jquery'], function ($) {
     var $popUpContent = $('.b-popup__content');
     var $openLink = $('.js-open-popup');
     var $closeLink = $('.js-close-popup');
-    var windowsOS = (navigator.userAgent.toLowerCase().indexOf('windows') !== -1);
-
+    // var windowsOS = (navigator.userAgent.toLowerCase().indexOf('windows') !== -1);
 
     // Закрытие попАпов
     function closePopUp() {
@@ -29,7 +28,7 @@ define(['jquery'], function ($) {
             element = doc.querySelector(selector),
             client = 'client' + scroll;
         scroll = 'scroll' + scroll;
-        return /CSS/.test(doc.compatMode)? (element[client]< element[scroll]) : (body[client]< body[scroll]);
+        return /CSS/.test(doc.compatMode) ? (element[client] < element[scroll]) : (body[client] < body[scroll]);
     }
 
     // Клик по ссылке открывающей попАп
@@ -39,10 +38,10 @@ define(['jquery'], function ($) {
         // Проверяем есть ли нам что открыть
         if ($popUpDate.length > 0) {
             // Проверяем операционную систему на Win и Скролл
-            if ((windowsOS) && (get_scroll('Height', '.b-page-wrapper'))) {
-                $page.addClass('windows');
-            }
-            // Закрываем перед открытиме другие
+            // if ((windowsOS) && (get_scroll('Height', '.b-page-wrapper'))) {
+            //     $page.addClass('windows');
+            // }
+            // Закрываем перед открытием другие
             $popUp.removeClass('open');
             $popUp.fadeOut(300);
 
@@ -70,7 +69,7 @@ define(['jquery'], function ($) {
     $(document).mouseup(function (e) {
         if ($popUp.hasClass('open')) {
             // Клик не по Контенту и не его дочкам
-            if (!$popUpContent.is(e.target)&& $popUpContent.has(e.target).length === 0) {
+            if (!$popUpContent.is(e.target) && $popUpContent.has(e.target).length === 0) {
                 closePopUp();
             }
         }
