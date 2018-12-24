@@ -45,10 +45,14 @@ define(['jquery'], function ($) {
   // Анимация активации кнопки перехода
   function goInBtnAnimation(e) {
     let xy = e.target.getBoundingClientRect();
+    let elHeight = e.target.clientHeight;
+    let sfxWidth = elHeight > 25 ? 2 : 3;
     $sfx.addClass('active');
     $sfx.css({
-      "top": `${xy.top + 7}px`,
-      "left": `${xy.left - 16}px`
+      "top": `${xy.top - 4}px`, 
+      "left": `${xy.left - 25}px`,
+      "height": `${elHeight + 8}px`,
+      "width": `${sfxWidth}px`,
     });
   };
 
