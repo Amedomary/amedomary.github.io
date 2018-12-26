@@ -51,3 +51,4 @@
 - 20.12.2018 **(v6.0.1)** - new double click event
 - 20.12.2018 **(v6.1.0)** - new colors
 - 24.12.2018 **(v6.2.0)** - new vars style for color, new bg and pages
+- 24.12.2018 **(v6.3.0)** - fix text page and menu
