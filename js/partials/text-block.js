@@ -1,12 +1,15 @@
 // ====================
 
-define([], function () {
+define(['jquery'], function ($) {
     const $hr = document.getElementById('read-line');
     const $textBlock = document.getElementsByClassName('b-text-block')[0];
+    const textBlockPosition = $textBlock.getBoundingClientRect().top + pageYOffset;
     const $btnLine = document.getElementById('read-btn-line');
     const $btnColor = document.getElementById('read-btn-color');
     const $btnSize = document.getElementById('read-btn-size');
     const $html = document.getElementsByTagName('html')[0];
+    const $toTopScrollBlock = document.getElementsByClassName('to-top-scroller')[0];
+
 
     // functions
     function positionLine(e) {
@@ -65,8 +68,28 @@ define([], function () {
         }
     }
 
+    function scrollToTop() {
+        // console.log($pageWithScroll.scrollTop);
+        $pageWithScroll.scrollTop(0);
+    }
+
     $btnColor.onclick = onClickColor;
     $btnSize.onclick = onClickSize;
     $btnLine.onclick = onClickLine;
+    $toTopScrollBlock.onclick = scrollToTop;
     addEventListener('mousemove', positionLine);
+
+
+    let $pageWithScroll = $('.b-page-wrapper--scroll');
+    let scrollPositionTop;
+    // скролим страницу 
+    $pageWithScroll.scroll(function () {
+        scrollPositionTop = $pageWithScroll.scrollTop();
+
+        if (scrollPositionTop > textBlockPosition) {
+            $toTopScrollBlock.classList.add("show");
+        } else {
+            $toTopScrollBlock.classList.remove("show");            
+        }
+    });    
 });
