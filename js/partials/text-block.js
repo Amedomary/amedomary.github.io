@@ -69,7 +69,6 @@ define(['jquery'], function ($) {
     }
 
     function scrollToTop() {
-        // console.log($pageWithScroll.scrollTop);
         $pageWithScroll.scrollTop(0);
     }
 
