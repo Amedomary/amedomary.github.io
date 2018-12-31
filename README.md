@@ -55,3 +55,4 @@
 - 30.12.2018 **(v6.4.0)** - fix text block, add scroll to top btn
 - 30.12.2018 **(v6.4.1)** - fast fix
 - 30.12.2018 **(v6.4.2)** - fix bg image
+- 30.12.2018 **(v6.4.3)** - fix metric
