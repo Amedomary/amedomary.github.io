@@ -66,3 +66,4 @@
 #### January 2019
 
 - 1.01.2019 **(v6.5.0)** - new backgrounds
+- 1.01.2019 **(v6.5.1)** - some fix
