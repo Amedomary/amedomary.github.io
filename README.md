@@ -1,4 +1,6 @@
-# [Amedomary.github.io](https://amedomary.github.io/)
+# Amedomary
+
+## Check here - [Amedomary.github.io](https://amedomary.github.io/)
 
 ### 2018
 
