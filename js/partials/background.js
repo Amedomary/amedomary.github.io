@@ -86,9 +86,10 @@ define(['jquery'], function ($) {
     $backgroundImageData = $('.js-background[data-background=\'' + ($(this).attr('data-background')) + '\']'); // Забираем дату из ссылки клика и закидываем в переменную картинки
     colorButtonData = $(this).attr('data-color'); // Забираем цвет фона кнопки из даты
     dataHrefMainNavigation = $(this).attr('data-href'); // забираем адресс ссылки из даты
-
+    
     // Если картинка со ссылкой ещё не октрыты (не совпадает ссылка с открытой фоткой)
     if (!($backgroundImageData.hasClass('show'))) {
+      event.preventDefault();
       // делаем кнопку и li активной
       $backgroundLink.removeClass('active');
       $listItemLink.removeClass('active-li');
@@ -101,7 +102,7 @@ define(['jquery'], function ($) {
       enableNavButton();
       goInBtnAnimation(event);
     } else {
-      $mainNavButton[0].click(); // дабл клик для перехода
+      // $mainNavButton[0].click(); // дабл клик для перехода
     }
   });
 

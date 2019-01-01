@@ -1,5 +1,7 @@
 # [Amedomary.github.io](https://amedomary.github.io/)
 
+### 2018
+
 #### April 2018
 
 - 14.04.2018 **(v1.0.2)**
@@ -56,3 +58,9 @@
 - 30.12.2018 **(v6.4.1)** - fast fix
 - 30.12.2018 **(v6.4.2)** - fix bg image
 - 30.12.2018 **(v6.4.3)** - fix metric
+
+### 2019
+
+#### January 2019
+
+- 1.01.2019 **(v6.5.0)** - new backgrounds
