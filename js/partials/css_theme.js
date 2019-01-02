@@ -1,7 +1,4 @@
 // ====================
-// robinzon: popup.js
-// 15.01.2018: Amedomary
-// ---------------------
 // Открытие попАпа и запрет скрола на body
 // ====================
 
@@ -21,16 +18,12 @@ define(['jquery', 'animejs'], function ($,anime) {
 
 
     var $docCss = document.querySelectorAll('.b-css__button');
-    // console.log($docCss);
-
     // вешаем обработчик клика на все кнопки
     for (i = 0; i < $docCss.length; i++) {
         $docCss[i].addEventListener('click', clickOnButton);
     };
 
-    function clickOnButton(e) {
-        // console.log(this);
+    function clickOnButton() {
         this.classList.toggle('class');
     }
-
 });

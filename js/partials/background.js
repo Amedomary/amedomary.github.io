@@ -9,17 +9,13 @@ define(['jquery'], function ($) {
   const $backgroundWrapper = $('.js-background-wrapper'); //обёртка фонов
   const $backgroundClose = $('.js-background-link-close'); //Кнопка очистки слайдера
   const $mainNavButton = $('.js-main-nav'); //кнопочка для переходу на страницу
-  const $sfx = $('.line-sfx'); // Кружочек спецэфектов
-  // const $sfxLine = $('.svg-sfx'); // Линия спецэфектов
+  const $sfx = document.querySelector('.line-sfx'); // Кружочек спецэфектов
   let $backgroundImageData; // Дата для фона
-  let textBefore = 'Выберите раздел...'; //текст До
-  let textAfter = 'Смотреть подробнее'; //текст После
+  let textBefore = $mainNavButton.text(); //текст До
+  let textAfter = 'Show more'; //текст После
   let colorButtonData; // Цвет для кнопки из ссылки
   let dataHrefMainNavigation; //дата для передачи ссылки в другую кнопку
-
-  let docHeight = document.documentElement.clientHeight;
-  let docWidth = document.documentElement.clientWidth;
-
+  let xy; // $sfx геометрич значение
 
   let state = {
     backgroundIsOpen: false,
@@ -42,22 +38,36 @@ define(['jquery'], function ($) {
     state.backgroundIsOpen = true;
   };
 
-  // Анимация активации кнопки перехода
+  // Анимация активации кнопки перехода и подчёркивания
   function goInBtnAnimation(e) {
-    let xy = e.target.getBoundingClientRect();
+    let oldXY = xy;
     let elHeight = e.target.clientHeight;
     let sfxWidth = elHeight > 25 ? 2 : 3;
-    $sfx.addClass('active');
-    $sfx.css({
-      "top": `${xy.top - 4}px`, 
-      "left": `${xy.left - 25}px`,
-      "height": `${elHeight + 8}px`,
-      "width": `${sfxWidth}px`,
-    });
+    let animationTime = 0;
+    xy = e.target.getBoundingClientRect();
+
+    // считаем дистанцию
+    let distance;
+    if (oldXY === undefined) {
+      distance = 0;
+    } else {
+      distance = Math.abs(xy.top - oldXY.top);
+    }
+    // расчитываем время анимации
+    // график уровнения корня
+    animationTime = (Math.pow(distance, 1/1.7) - (distance / 100)) / 30;
+
+    $sfx.classList.add('active');
+    // styles
+    $sfx.style.transition = `all ${animationTime}s, opacity .2s`;
+    $sfx.style.top = `${xy.top - 4}px`;
+    $sfx.style.left = `${xy.left - 25}px`;
+    $sfx.style.height = `${elHeight + 8}px`;
+    $sfx.style.width = `${sfxWidth}px`;
   };
 
   function goOutBtnAnimation(e) {
-    $sfx.removeClass('active');
+    $sfx.classList.remove('active');
   }
 
   $(document).on('keydown', function (event) {
@@ -102,7 +112,7 @@ define(['jquery'], function ($) {
       enableNavButton();
       goInBtnAnimation(event);
     } else {
-      // $mainNavButton[0].click(); // дабл клик для перехода
+      // дабл клик для перехода
     }
   });
 
@@ -115,5 +125,6 @@ define(['jquery'], function ($) {
     $(this).removeClass('active');
     goOutBtnAnimation();
     disableNavButton();
+    xy = undefined;
   });
 });
