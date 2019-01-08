@@ -67,4 +67,5 @@
 
 - 1.01.2019 **(v6.5.0)** - new backgrounds
 - 1.01.2019 **(v6.5.1)** - some fix
-- 1.02.2019 **(v6.5.2)** - fix menu
+- 2.01.2019 **(v6.5.2)** - fix menu
+- 9.01.2019 **(v6.5.3)** - fix menu and index
