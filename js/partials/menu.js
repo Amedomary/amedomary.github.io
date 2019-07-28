@@ -4,12 +4,13 @@
 
 define(['jquery'], function ($) {
     // !menu code
-    var $page = $('.b-page-wrapper');
-    var $popUp = $('.b-popup');
-    var $popUpContent = $('.b-popup__content');
-    var $openLink = $('.js-open-popup');
-    var $closeLink = $('.js-close-popup');
-    // var windowsOS = (navigator.userAgent.toLowerCase().indexOf('windows') !== -1);
+    const $page = $('.b-page-wrapper');
+    const $popUp = $('.b-popup');
+    const $popUpContent = $('.b-popup__content');
+    const $openLink = $('.js-open-popup');
+    const $closeLink = $('.js-close-popup');
+
+    // let windowsOS = (navigator.userAgent.toLowerCase().indexOf('windows') !== -1);
 
     // Закрытие попАпов
     function closePopUp() {
@@ -23,7 +24,7 @@ define(['jquery'], function ($) {
 
     // Проверка на наличие скролаа
     function get_scroll(scroll, selector) {
-        var doc = document,
+        let doc = document,
             body = doc.body,
             element = doc.querySelector(selector),
             client = 'client' + scroll;
@@ -33,7 +34,7 @@ define(['jquery'], function ($) {
 
     // Клик по ссылке открывающей попАп
     $openLink.on('click', function () {
-        var $popUpDate = $('.b-popup[data-popup=\'' + ($(this).attr('data-popup')) + '\']');
+        let $popUpDate = $('.b-popup[data-popup=\'' + ($(this).attr('data-popup')) + '\']');
 
         // Проверяем есть ли нам что открыть
         if ($popUpDate.length > 0) {

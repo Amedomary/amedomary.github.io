@@ -4,22 +4,23 @@
 
 define(['jquery'], function ($) {
 
-  var $hamburgerButton = $('.js-hamburger');
-  var $mainMenu = $('.js-main-menu');
-  var $page = $('.b-page-wrapper');
-  var $pageWithScroll = $('.b-page-wrapper--scroll');
-  // var windowsOS = (navigator.userAgent.toLowerCase().indexOf('windows') !== -1); // true для Win
+  const $hamburgerButton = $('.js-hamburger');
+  const $mainMenu = $('.js-main-menu');
+  const $page = $('.b-page-wrapper');
+  const $pageWithScroll = $('.b-page-wrapper--scroll');
+
+  // let windowsOS = (navigator.userAgent.toLowerCase().indexOf('windows') !== -1); // true для Win
   // if ($page.length > 0) {
-  //   var windowsHasScroll = (windowsOS) && (getScroll('Height', '.b-page-wrapper')); // true Если Page у Windows имеет скролл
+  //   let windowsHasScroll = (windowsOS) && (getScroll('Height', '.b-page-wrapper')); // true Если Page у Windows имеет скролл
   // }
-  var scrollWrapper; // положение скрола
+  let scrollWrapper; // положение скрола
 
   // Проверка на наличие скролаа
   function getScroll(scroll, selector) {
-    var doc = document;
-    var body = doc.body;
-    var element = doc.querySelector(selector);
-    var client = 'client' + scroll;
+    let doc = document;
+    let body = doc.body;
+    let element = doc.querySelector(selector);
+    let client = 'client' + scroll;
     scroll = 'scroll' + scroll;
     return /CSS/.test(doc.compatMode) ? (element[client] < element[scroll]) : (body[client] < body[scroll]);
   }
@@ -88,7 +89,7 @@ define(['jquery'], function ($) {
   });
 
   if ($pageWithScroll.length > 0) {
-    // скролим страницу 
+    // скролим страницу
     $pageWithScroll.scroll(function () {
       scrollWrapper = $pageWithScroll.scrollTop();
 

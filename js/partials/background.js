@@ -16,9 +16,88 @@ define(['jquery'], function ($) {
   let colorButtonData; // Цвет для кнопки из ссылки
   let dataHrefMainNavigation; //дата для передачи ссылки в другую кнопку
   let xy; // $sfx геометрич значение
+  const $descriptionBlock = $('.js-description');
+  const $descriptionText = $('.js-description-block p');
+  const $tagBar = $('.b-main-nav__tag-bar');
 
   let state = {
     backgroundIsOpen: false,
+  }
+
+  const dataDescription = {
+    id_login: {
+      text: 'Форма входа на сайт',
+      tags: ['Animation', 'Vue.JS', 'UI/UX']
+    },
+    id_timer: {
+      text: 'Приложение для запуска таймера с возможностю поделиться своим результатом',
+      tags: ['SPA', 'Vue.JS', 'UI/UX', 'Alarm', 'Animation', 'firebase']
+    },
+    id_css_vars: {
+      text: 'Статья о том как возможно использовать CSS переменные',
+      tags: ['CSS']
+    },
+    id_fractus: {
+      text: 'Динамическое создание фракталов на JS',
+      tags: ['mathematic', 'geometry', 'algorithm', 'canvas']
+    },
+    id_game: {
+      text: '2D игра с поддержкой геймпадов',
+      tags: ['2D', 'game', 'canvas']
+    },
+    id_xcom: {
+      text: 'Стратегическая пошаговая игра в жанре X-com',
+      tags: ['2D', 'game', 'canvas']
+    },
+    id_animation: {
+      text: 'Возможности стоковых и не только анимаций на CSS и JS',
+      tags: ['CSS', 'animation']
+    },
+    id_chart: {
+      text: 'Создание графиков и их отрисовка',
+      tags: ['mathematic', 'geometry', 'algorithm', 'canvas']
+    },
+    id_calculator: {
+      text: 'Красивый калькулятор',
+      tags: ['mathematic'],
+    },
+    id_form: {
+      text: 'Пример форм с плавающим лейблом',
+      tags: ['CSS', 'animation', 'UX']
+    },
+    id_blog: {
+      text: 'Страница блога',
+      tags: ['markdown', 'CSS-vars', 'themes']
+    },
+    id_portfolio: {
+      text: 'Чек лист скилов',
+      tags: ['markdown']
+    },
+    id_3d: {
+      text: 'Демонстрация 3д возможностей CSS',
+      tags: ['3D', 'CSS']
+    },
+
+    // default
+    id_: {
+      text: '',
+      tags: []
+    },
+  }
+
+  function enableDescription(text, tags) {
+    $descriptionText.html(text);
+
+    $tagBar.html('');
+    tags.forEach(element => {
+      $tagBar.append(`<span class="b-main-nav__tag">${element}</span>`);
+    });
+
+    $descriptionBlock.addClass('active');
+  }
+
+  function disableDescription(e) {
+    $descriptionBlock.removeClass('active');
   }
 
   // Дизейблит кнопку перехода на др страницу
@@ -55,7 +134,7 @@ define(['jquery'], function ($) {
     }
     // расчитываем время анимации
     // график уровнения корня
-    animationTime = (Math.pow(distance, 1/1.7) - (distance / 100)) / 30;
+    animationTime = (Math.pow(distance, 1 / 1.7) - (distance / 100)) / 30;
 
     $sfx.classList.add('active');
     // styles
@@ -70,6 +149,7 @@ define(['jquery'], function ($) {
     $sfx.classList.remove('active');
   }
 
+  // Клик по клавише
   $(document).on('keydown', function (event) {
     // Клик по табу
     if (event.keyCode === 9) {
@@ -96,7 +176,8 @@ define(['jquery'], function ($) {
     $backgroundImageData = $('.js-background[data-background=\'' + ($(this).attr('data-background')) + '\']'); // Забираем дату из ссылки клика и закидываем в переменную картинки
     colorButtonData = $(this).attr('data-color'); // Забираем цвет фона кнопки из даты
     dataHrefMainNavigation = $(this).attr('data-href'); // забираем адресс ссылки из даты
-    
+    idElement = $(this).attr('data-element-id');
+
     // Если картинка со ссылкой ещё не октрыты (не совпадает ссылка с открытой фоткой)
     if (!($backgroundImageData.hasClass('show'))) {
       event.preventDefault();
@@ -110,6 +191,7 @@ define(['jquery'], function ($) {
       $backgroundImageData.addClass('show'); // показываем конкретный фон
       $backgroundClose.addClass('active'); // показываем кнопку закрыть
       enableNavButton();
+      enableDescription(dataDescription[idElement].text, dataDescription[idElement].tags);
       goInBtnAnimation(event);
     } else {
       // дабл клик для перехода
@@ -125,6 +207,7 @@ define(['jquery'], function ($) {
     $(this).removeClass('active');
     goOutBtnAnimation();
     disableNavButton();
+    disableDescription();
     xy = undefined;
   });
 });
