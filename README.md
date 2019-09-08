@@ -69,3 +69,6 @@
 - 1.01.2019 **(v6.5.1)** - some fix
 - 2.01.2019 **(v6.5.2)** - fix menu
 - 9.01.2019 **(v6.5.3)** - fix menu and index
+
+#### September 2019
+- 8.09.2019 **(v6.5.4)** - fix 3d page, fix blog example

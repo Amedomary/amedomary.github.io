@@ -30,12 +30,12 @@ define(['jquery'], function ($) {
       tags: ['Animation', 'Vue.JS', 'UI/UX']
     },
     id_timer: {
-      text: 'Приложение для запуска таймера с возможностю поделиться своим результатом',
+      text: 'Приложение для запуска таймера с возможностью поделиться своим событием',
       tags: ['SPA', 'Vue.JS', 'UI/UX', 'Alarm', 'Animation', 'firebase']
     },
     id_css_vars: {
-      text: 'Статья о том как возможно использовать CSS переменные',
-      tags: ['CSS']
+      text: 'Статья о том, как создавать кстомные темы на CSS переменных',
+      tags: ['CSS', 'blog']
     },
     id_fractus: {
       text: 'Динамическое создание фракталов на JS',
@@ -74,7 +74,7 @@ define(['jquery'], function ($) {
       tags: ['markdown']
     },
     id_3d: {
-      text: 'Демонстрация 3д возможностей CSS',
+      text: 'Демонстрация 3D возможностей CSS',
       tags: ['3D', 'CSS']
     },
 
