@@ -73,3 +73,6 @@
 #### September 2019
 - 8.09.2019 **(v6.5.4)** - fix 3d page, fix blog example
 - 15.09.2019 **(v6.6.0)** - fix main screen, new page REM
+
+#### October 2019
+- 4.10.2019 **(v7.0.0)** - update all npm, and new btn
