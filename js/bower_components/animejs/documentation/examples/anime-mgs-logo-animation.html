@@ -5,18 +5,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:title" content="anime.js">
-  <meta property="og:url" content="http://animejs.com">
+  <meta property="og:url" content="https://animejs.com">
   <meta property="og:description" content="Javascript Animation Engine">
-  <meta property="og:image" content="http://animejs.com/documentation/assets/img/icons/og.png">
+  <meta property="og:image" content="https://animejs.com/documentation/assets/img/icons/og.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="anime.js">
   <meta name="twitter:site" content="@juliangarnier">
   <meta name="twitter:description" content="Javascript Animation Engine">
-  <meta name="twitter:image" content="http://animejs.com/documentation/assets/img/icons/twitter.png">
-  <link rel="apple-touch-icon-precomposed" href="../assets/img/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/icons/favicon.png">
-  <link href="../assets/css/anime.css" rel="stylesheet">
-  <script src="../../anime.js"></script>
+  <meta name="twitter:image" content="https://animejs.com/documentation/assets/img/icons/twitter.png">
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/social-media-image.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link href="../assets/css/animejs.css" rel="stylesheet">
+  <link href="../assets/css/documentation.css" rel="stylesheet">
+  <script src="../../lib/anime.min.js"></script>
+  <!-- <script src="../assets/js/anime/anime.2.2.0.js"></script> -->
   <style>
 
     html,
@@ -32,7 +34,7 @@
       justify-content: center;
     }
 
-    .logo { margin: auto; }
+    .mgs-logo { margin: auto; }
     .vert { transform-origin: center bottom; }
     .hori { transform-origin: 0% 50%; }
     .diag-left { transform-origin: 100% 100%; }
@@ -49,7 +51,7 @@
 </head>
 <body>
   <section>
-    <svg class="logo" width="100%" height="448" viewBox="0 0 1024 448">
+    <svg class="mgs-logo" width="100%" height="448" viewBox="0 0 1024 448">
       <g class="stripes" transform="translate(321.000000, 160.000000)" fill="#FFF">
         <path d="M8,20 L12,16 L92,16 L88,20 L8,20 L8,20 L8,20 L8,20 Z" class="stripe stripe-left"></path>
         <path d="M4,24 L0,28 L80,28 L84,24 L4,24 L4,24 L4,24 L4,24 Z" class="stripe stripe-left"></path>
@@ -175,8 +177,8 @@
     loop: true
   });
 
-  logoAnimation.add([
-    {
+  logoAnimation
+  .add({
       targets: '.stripes path',
       translateX: [-1000, 0],
       opacity: {
@@ -187,8 +189,8 @@
       delay: (el, i) => 2200 + (i * 75),
       duration: 400,
       easing: 'easeOutExpo',
-      offset: 0
-    }, {
+    }, 0)
+  .add({
       targets: '.katakana path',
       d: (el) => el.getAttribute('data-d'),
       opacity: {
@@ -199,16 +201,16 @@
       delay: (el, i) => 2400 + (i * 120),
       duration: 1200,
       easing: 'easeOutCirc',
-      offset: 0
-    }, {
+    }, 0)
+    .add({
       targets: '.text-fills path',
       opacity: [0, 1],
       fill: '#F9C100',
       easing: 'easeOutExpo',
       duration: 200,
       delay: (t, i) => 3300 + (anime.random(0, 450)),
-      offset: 0
-    }, {
+    }, 0)
+    .add({
       targets: '.line',
       translateX: (target) => {
         let x = 1200;
@@ -225,10 +227,6 @@
         if (target.classList.contains('diag-left')) translate =  y / 3;
         return [translate, 0];
       },
-      scale: {
-        value: [6, 1],
-        duration: 500,
-      },
       stroke: '#F9C100',
       opacity: {
         value: [0, 1],
@@ -236,12 +234,10 @@
       },
       delay: (t, i) => (i * 25),
       duration: 500,
-      easing: 'easeOutQuart',
-      offset: 0
-    }
-  ]);
+      easing: 'easeOutSine',
+    }, 0);
 
   </script>
-  <script src="../assets/js/stats.js"></script>
+  <script src="../assets/js/vendors/stats.min.js"></script>
 </body>
 </html>

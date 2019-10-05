@@ -76,3 +76,4 @@
 
 #### October 2019
 - 4.10.2019 **(v7.0.0)** - update all npm, and new btn
+- 5.10.2019 **(v7.0.1)** - fix mobile, add new animation

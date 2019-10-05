@@ -2,7 +2,7 @@
 // Открытие попАпа и запрет скрола на body
 // ====================
 
-define(['jquery', 'animejs'], function ($,anime) {
+define(['jquery', 'animejs'], function ($, anime) {
 
     var cssSelector = anime({
         targets: '.element',
