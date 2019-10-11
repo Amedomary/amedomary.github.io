@@ -89,6 +89,11 @@ define(['jquery'], function ($) {
     },
   }
 
+  function updateCanvas() {
+    properties.partColor = `rgba(${colorButtonData}, 1)`;
+    properties.partLineSubColor = `rgba(${colorButtonData}, `;
+  }
+
   function enableDescription(text, tags) {
     $descriptionText.html(text);
 
@@ -117,8 +122,8 @@ define(['jquery'], function ($) {
   function enableNavButton() {
     $mainNavButton.removeClass('disable');
     $mainNavButtonText.text(textAfter);
-    $mainNavButton.css('border-color', colorButtonData);
-    $mainNavButton.css('background-color', `${colorButtonData.slice(0, -1)}, .4)`);
+    $mainNavButton.css("border-color", `rgba(${colorButtonData}, .2)`);
+    $mainNavButton.css('background-color', `rgba(${colorButtonData}, .1)`);
     $mainNavButton.attr('href', dataHrefMainNavigation);
     state.backgroundIsOpen = true;
   };
@@ -196,6 +201,7 @@ define(['jquery'], function ($) {
       $backgroundImage.removeClass('show'); // скрываем все фоны
       $backgroundImageData.addClass('show'); // показываем конкретный фон
       $backgroundClose.addClass('active'); // показываем кнопку закрыть
+      updateCanvas();
       enableNavButton();
       enableDescription(dataDescription[idElement].text, dataDescription[idElement].tags);
       goInBtnAnimation(event);
