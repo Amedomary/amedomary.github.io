@@ -9,7 +9,7 @@ define(["jquery"], function($) {
 
   const parts = [];
 
-  class part {
+  class Part {
     constructor() {
       this.x = Math.random() * w;
       this.y = Math.random() * h;
@@ -41,6 +41,29 @@ define(["jquery"], function($) {
       ctx.fill();
     }
   }
+
+  document.addEventListener("mousemove", logKey);
+  let xxx = 0, yyy = 0;
+  function logKey(e) {
+    xxx = e.clientX;
+    yyy = e.clientY;
+  }
+
+  class MousePart extends Part {
+    constructor() {
+      super();
+      this.x = xxx;
+      this.y = yyy;
+      this.vX = 0;
+      this.vY = 0;
+    }
+
+    position() {
+      this.x = xxx;
+      this.y = yyy;
+    }
+  }
+
 
   function reDrowBg() {
     ctx.clearRect(0, 0, w, h);
@@ -88,8 +111,10 @@ define(["jquery"], function($) {
 
   function init() {
     for (let index = 0; index < properties.partCount; index++) {
-      parts.push(new part());
+      parts.push(new Part());
     }
+    parts.push(new MousePart());
+
     loop();
   }
 

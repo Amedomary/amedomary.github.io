@@ -92,6 +92,7 @@ define(['jquery'], function ($) {
   function updateCanvas() {
     properties.partColor = `rgba(${colorButtonData}, 1)`;
     properties.partLineSubColor = `rgba(${colorButtonData}, `;
+    $("html").css({ "--canvas-color": `rgba(${colorButtonData}, 1)` });
   }
 
   function enableDescription(text, tags) {
