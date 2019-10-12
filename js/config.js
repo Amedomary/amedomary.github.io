@@ -8,7 +8,8 @@ require.config({
     vue: "bower_components/vue/dist/vue.runtime.common",
     vuejs: "bower_components/vue/dist/vue",
     "jquery-validation": "bower_components/jquery-validation/dist/jquery.validate",
-    lodash: "bower_components/lodash/lodash"
+    lodash: "bower_components/lodash/lodash",
+    stats: "bower_components/stats.js/build/stats"
   },
   packages: [
 

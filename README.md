@@ -79,3 +79,4 @@
 - 5.10.2019 **(v7.0.1)** - fix mobile, add new animation
 - 11.10.2019 **(v7.1.0)** - add canvas for bg, mouse and fix tablet
 - 11.10.2019 **(v7.1.1)** - add mouse on canvas
+- 12.10.2019 **(v7.1.2)** - add more functions for bg

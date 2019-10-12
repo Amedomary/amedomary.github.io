@@ -1,7 +1,15 @@
-
 // const properties is global
 
-define(["jquery"], function($) {
+define(["jquery", "stats"], function($, Stats) {
+  // stats
+  var stats = new Stats();
+  stats.setMode(0);
+  stats.domElement.style.position = "fixed";
+  stats.domElement.style.left = "0px";
+  stats.domElement.style.top = "auto";
+  stats.domElement.style.bottom = "0px";
+  // document.body.appendChild(stats.domElement); // СЧЁТЧИК - раскоментить для теста
+
   const canvas = $(".bg-canvas")[0];
   const ctx = canvas.getContext("2d");
   const w = (canvas.width = innerWidth);
@@ -43,7 +51,8 @@ define(["jquery"], function($) {
   }
 
   document.addEventListener("mousemove", logKey);
-  let xxx = 0, yyy = 0;
+  let xxx = 0;
+  let yyy = 0;
   function logKey(e) {
     xxx = e.clientX;
     yyy = e.clientY;
@@ -64,6 +73,19 @@ define(["jquery"], function($) {
     }
   }
 
+  document.addEventListener("click", createStaticDot);
+  function createStaticDot(e) {
+    parts.push(new MousePartStatic(e.clientX, e.clientY));
+  }
+
+  class MousePartStatic extends MousePart {
+    constructor(x, y) {
+      super();
+      this.x = x;
+      this.y = y;
+    }
+    position() {}
+  }
 
   function reDrowBg() {
     ctx.clearRect(0, 0, w, h);
@@ -101,25 +123,29 @@ define(["jquery"], function($) {
   }
 
   function loop() {
+    stats.begin();
+
     reDrowBg();
     reDrawparts();
     drawLines();
+
+    stats.end();
 
     // рекурсия
     requestAnimationFrame(loop);
   }
 
   function init() {
+    parts.push(new MousePart());
+
     for (let index = 0; index < properties.partCount; index++) {
       parts.push(new Part());
     }
-    parts.push(new MousePart());
 
     loop();
   }
 
-  if (screen.width > 1023) {
-      init();
+  if (window.innerWidth > 1023) {
+    init();
   }
-
 });
