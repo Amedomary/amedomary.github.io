@@ -1,5 +1,3 @@
-
-
 const properties = {
   partColor: "rgba(255, 255, 255, 1)",
   partLineSubColor: "rgba(255, 255, 255, ", // сабстрока для опасити
@@ -10,5 +8,5 @@ const properties = {
 };
 
 require(["./config"], function() {
-  require(["partials/background", "partials/bg-canvas"]);
+  require(["partials/background", "partials/bg-canvas", "partials/mouse"]);
 });

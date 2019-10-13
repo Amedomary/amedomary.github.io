@@ -22,6 +22,5 @@ require([
   "ofi",
   "partials/menu",
   "partials/main_menu",
-  "partials/calculator",
-  "partials/mouse"
+  "partials/calculator"
 ]);
