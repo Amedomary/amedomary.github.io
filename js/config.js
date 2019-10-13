@@ -1,15 +1,12 @@
 require.config({
   baseUrl: "js",
   paths: {
-    jquery: "jquery/jquery.min",
+    jquery: "external/jquery-3.4.1.min",
     modernizr: "external/modernizr-custom",
     ofi: "external/ofi.min",
-    animejs: "bower_components/animejs/anime",
-    vue: "bower_components/vue/dist/vue.runtime.common",
-    vuejs: "bower_components/vue/dist/vue",
-    "jquery-validation": "bower_components/jquery-validation/dist/jquery.validate",
-    lodash: "bower_components/lodash/lodash",
-    stats: "bower_components/stats.js/build/stats"
+    lodash: "external/lodash.min",
+    animejs: "external/anime.min",
+    stats: "external/stats.min"
   },
   packages: [
 
@@ -26,6 +23,5 @@ require([
   "partials/menu",
   "partials/main_menu",
   "partials/calculator",
-  "partials/mouse",
-  // 'partials/landing_vue',
+  "partials/mouse"
 ]);
