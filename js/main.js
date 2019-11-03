@@ -4,7 +4,7 @@ const properties = {
   partRadius: 3,
   partCount: Math.floor(window.innerWidth * 0.024),
   partMaxV: 0.5,
-  maxL: 210
+  maxL: 210 * window.devicePixelRatio,
 };
 
 require(["./config"], function() {

@@ -10,10 +10,13 @@ define(["jquery", "stats"], function($, Stats) {
   stats.domElement.style.bottom = "0px";
   // document.body.appendChild(stats.domElement); // СЧЁТЧИК - раскоментить для теста
 
+  const pixelRatio = window.devicePixelRatio;
   const canvas = $(".bg-canvas")[0];
   const ctx = canvas.getContext("2d");
-  const w = (canvas.width = innerWidth);
-  const h = (canvas.height = innerHeight);
+  const w = innerWidth * pixelRatio;
+  const h = innerHeight * pixelRatio;
+  canvas.width = w;
+  canvas.height = h;
 
   const parts = [];
 
@@ -68,8 +71,8 @@ define(["jquery", "stats"], function($, Stats) {
     }
 
     position() {
-      this.x = xxx;
-      this.y = yyy;
+      this.x = xxx * pixelRatio;
+      this.y = yyy * pixelRatio;
     }
   }
 
@@ -81,8 +84,8 @@ define(["jquery", "stats"], function($, Stats) {
   class MousePartStatic extends MousePart {
     constructor(x, y) {
       super();
-      this.x = x;
-      this.y = y;
+      this.x = x * pixelRatio;
+      this.y = y * pixelRatio;
     }
     position() {}
   }

@@ -83,3 +83,7 @@
 - 13.10.2019 **(v7.2.0)** - new js build. new menu
 - 13.10.2019 **(v8.0.1)** - new page portfolio, fix icons, fix bg
 - 13.10.2019 **(v8.0.2)** - fix animations and color
+
+
+#### November 2019
+- 3.11.2019 **(v8.0.3)** - fix retina display canvas
