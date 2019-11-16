@@ -113,7 +113,7 @@ define(["jquery", "stats"], function($, Stats) {
 
         if (l < properties.maxL) {
           opacity = 1 - l / properties.maxL;
-          ctx.lineWidth = "0.5";
+          ctx.lineWidth = "1.5";
           ctx.strokeStyle = `${properties.partLineSubColor} ${opacity})`;
           ctx.beginPath();
           ctx.moveTo(x1, y1);
