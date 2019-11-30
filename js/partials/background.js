@@ -13,6 +13,7 @@ define(["jquery"], function($) {
   const textBefore = $mainNavButtonText.text(); //текст До
   const $sfx = document.querySelector(".line-sfx"); // Кружочек спецэфектов
   const textAfter = "Show more"; //текст После
+  const $mainNavList = $(".js-main-list-nav");
   const $descriptionBlock = $(".js-description");
   const $descriptionText = $(".js-description-block p");
   const $tagBar = $(".b-main-nav__tag-bar");
@@ -105,10 +106,12 @@ define(["jquery"], function($) {
     });
 
     $descriptionBlock.addClass("active");
+    $mainNavList.addClass("active");
   }
 
   function disableDescription() {
     $descriptionBlock.removeClass("active");
+    $mainNavList.removeClass("active");
   }
 
   // Дизейблит кнопку перехода на др страницу
@@ -148,6 +151,8 @@ define(["jquery"], function($) {
     // расчитываем время анимации
     // график уровнения корня
     animationTime = (Math.pow(distance, 1 / 1.7) - distance / 100) / 30;
+
+    // alert('dsd ');
 
     $sfx.classList.add("active");
     // styles

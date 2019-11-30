@@ -2,12 +2,12 @@
 
 define(["jquery", "stats"], function($, Stats) {
   // stats
-  var stats = new Stats();
-  stats.setMode(0);
-  stats.domElement.style.position = "fixed";
-  stats.domElement.style.left = "0px";
-  stats.domElement.style.top = "auto";
-  stats.domElement.style.bottom = "0px";
+  // var stats = new Stats();
+  // stats.setMode(0);
+  // stats.domElement.style.position = "fixed";
+  // stats.domElement.style.left = "0px";
+  // stats.domElement.style.top = "auto";
+  // stats.domElement.style.bottom = "0px";
   // document.body.appendChild(stats.domElement); // СЧЁТЧИК - раскоментить для теста
 
   const pixelRatio = window.devicePixelRatio;
@@ -126,13 +126,13 @@ define(["jquery", "stats"], function($, Stats) {
   }
 
   function loop() {
-    stats.begin();
+    // stats.begin();
 
     reDrowBg();
     reDrawparts();
     drawLines();
 
-    stats.end();
+    // stats.end();
 
     // рекурсия
     requestAnimationFrame(loop);
