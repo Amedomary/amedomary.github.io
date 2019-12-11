@@ -89,3 +89,6 @@
 - 3.11.2019 **(v8.0.3)** - fix retina display canvas
 - 16.11.2019 **(v8.1.0)** - fix macOS and start screen, add new social
 - 30.11.2019 **(v8.1.1)** - fix macOS
+
+#### December 2019
+- 11.12.2019 **(v9.0.0)** - add theme switcher

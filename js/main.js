@@ -4,9 +4,14 @@ const properties = {
   partRadius: 3,
   partCount: Math.floor(window.innerWidth * 0.012),
   partMaxV: 0.5,
-  maxL: 210 * window.devicePixelRatio,
+  maxL: 210 * window.devicePixelRatio
 };
 
 require(["./config"], function() {
-  require(["partials/background", "partials/bg-canvas", "partials/mouse"]);
+  require([
+    "partials/background",
+    "partials/bg-canvas",
+    "partials/mouse",
+    "partials/switch-theme"
+  ]);
 });
