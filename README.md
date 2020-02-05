@@ -85,3 +85,8 @@
 #### December 2019
 - 11.12.2019 **(v9.0.0)** - add theme switcher
 - 22.12.2019 **(v9.1.1)** - fix colors and mobile
+
+### 2020
+
+#### February 2020
+- 06.02.2020 **(v9.1.2)** - fix mobile, add beercoin

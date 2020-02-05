@@ -84,6 +84,11 @@ define(["jquery"], function($) {
       tags: ["3D", "CSS"]
     },
 
+    id_beercoin: {
+      text: "Подкинь монетку и пей бесплатно! Закрути свою удачу и получи скидку в случайном баре.",
+      tags: ["3D", "CSS", "React", "Start up"]
+    },
+
     // default
     id_: {
       text: "",
