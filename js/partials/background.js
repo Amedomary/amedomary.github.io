@@ -83,7 +83,10 @@ define(["jquery"], function($) {
       text: "Демонстрация 3D возможностей CSS",
       tags: ["3D", "CSS"]
     },
-
+    id_prerender: {
+      text: "Возможность пререндера на js canvas 2D",
+      tags: ["2D", "Canvas"]
+    },
     id_beercoin: {
       text: "Подкинь монетку и пей бесплатно! Закрути свою удачу и получи скидку в случайном баре.",
       tags: ["3D", "CSS", "React", "Start up"]
