@@ -84,7 +84,10 @@ define(["jquery"], function($) {
       tags: ["3D", "CSS"]
     },
     id_prerender: {
-      text: "Возможность пререндера на js canvas 2D",
+      text: `
+        <p>Возможность пререндера на js canvas 2D</p>
+        <a href="https://habr.com/ru/users/amedomary/posts/" target="_blank">Читать на Habr</a>
+      `,
       tags: ["2D", "Canvas"]
     },
     id_beercoin: {

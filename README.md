@@ -92,3 +92,4 @@
 - 06.02.2020 **(v9.1.2)** - fix mobile, add beercoin
 - 16.02.2020 **(v9.2.1)** - new pages / add portfolio page aka my project list
 - 22.02.2020 **(v9.3.0)** - new pages and new information
+- 22.02.2020 **(v9.3.1)** - fix metric
