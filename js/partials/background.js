@@ -68,20 +68,20 @@ define(["jquery"], function($) {
       tags: ["mathematic"]
     },
     id_form: {
-      text: "Пример форм с плавающим лейблом",
-      tags: ["CSS", "animation", "UX"]
+      text: "Аудиовизуализатор (эквалайзер)",
+      tags: ["Canvas", "Audio", "Animation", "UX"]
     },
     id_blog: {
       text: "Страница блога",
       tags: ["markdown", "CSS-vars", "themes"]
     },
     id_portfolio: {
-      text: "Чек лист скилов",
+      text: "Продолжение списка моих проектов",
       tags: ["markdown"]
     },
     id_3d: {
-      text: "Демонстрация 3D возможностей CSS",
-      tags: ["3D", "CSS"]
+      text: "Расширение для touch bar (macbook pro) под VS Code",
+      tags: ["VS Code", "Extention", "TS"]
     },
     id_prerender: {
       text: `
