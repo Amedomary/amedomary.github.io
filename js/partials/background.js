@@ -17,6 +17,7 @@ define(["jquery"], function($) {
   const $descriptionBlock = $(".js-description");
   const $descriptionText = $(".js-description-block p");
   const $tagBar = $(".b-main-nav__tag-bar");
+  const $visitDirectLink = $(".js-visit-direct-link");
   let $backgroundImageData; // Дата для фона
   let colorButtonData; // Цвет для кнопки из ссылки
   let dataHrefMainNavigation; //дата для передачи ссылки в другую кнопку
@@ -243,6 +244,7 @@ define(["jquery"], function($) {
         dataDescription[idElement].text,
         dataDescription[idElement].tags
       );
+      $visitDirectLink.attr('href', dataHrefMainNavigation);
       goInBtnAnimation(event);
     } else {
       // дабл клик для перехода

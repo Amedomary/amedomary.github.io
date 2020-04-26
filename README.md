@@ -97,3 +97,6 @@
 
 #### March 2020
 - 27.03.2020 **(v9.3.2)** - add more links
+
+#### April 2020
+- 26.04.2020 **(v10.0.0)** - new animation page, fix adaptive, new shbow bore btn
