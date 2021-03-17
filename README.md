@@ -111,3 +111,4 @@
 
 #### March 2021
 - 17.03.2020 **(v10.1.0)** - new theme matches with OS theme
+- 17.03.2020 **(v10.1.1)** - fix year
