@@ -1,14 +1,11 @@
-// ====================
-// Открытие попАпа и запрет скрола на body
-// ====================
 
 define(['jquery', 'animejs'], function ($,anime) {
 
     var $linkTheme = $('.js-swap-theme');
     var $linkThemeData;
     var $linkThemeStyleData;
-    
-    $linkTheme.click(function (e) { 
+
+    $linkTheme.click(function (e) {
         $linkThemeData = $(this).attr('data-theme-color');
         $('html').attr('data-theme-color', $linkThemeData);
 
