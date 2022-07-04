@@ -6,7 +6,7 @@ require.config({
     ofi: "external/ofi.min",
     lodash: "external/lodash.min",
     animejs: "external/anime.min",
-    stats: "external/stats.min"
+    // stats: "external/stats.min"
   },
   packages: [
 

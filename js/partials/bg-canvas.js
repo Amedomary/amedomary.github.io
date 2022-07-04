@@ -1,14 +1,6 @@
 // const properties is global
 
-define(["jquery", "stats"], function($, Stats) {
-  // stats
-  // var stats = new Stats();
-  // stats.setMode(0);
-  // stats.domElement.style.position = "fixed";
-  // stats.domElement.style.left = "0px";
-  // stats.domElement.style.top = "auto";
-  // stats.domElement.style.bottom = "0px";
-  // document.body.appendChild(stats.domElement); // СЧЁТЧИК - раскоментить для теста
+define(["jquery"], function($) {
 
   const pixelRatio = window.devicePixelRatio;
   const canvas = $(".bg-canvas")[0];
