@@ -112,3 +112,11 @@
 #### March 2021
 - 17.03.2020 **(v10.1.0)** - new theme matches with OS theme
 - 17.03.2020 **(v10.1.1)** - fix year
+
+### 2022
+
+#### June 2022
+- 29.06.2022 **(v10.1.2)** - fix year / add new my site
+
+#### August 2022
+- 28.08.2022 **(v10.2.0)** - add donate button
