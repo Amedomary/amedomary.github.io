@@ -62,6 +62,13 @@ define(['jquery'], function ($) {
 
   // Жмяк по 'M'
   $(document).on('keydown', function (event) {
+    const target = event.target;
+    if (event.ctrlKey || event.metaKey || event.altKey || event.repeat ||
+        event.isComposing || (event.originalEvent &&
+          (event.originalEvent.isComposing || event.originalEvent.repeat)) ||
+        (target && (/^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName) || target.isContentEditable))) {
+      return;
+    }
     if (event.keyCode === 77) {
       // Если гамбургер закрыт
       if ($hamburgerButton.hasClass('close')) {

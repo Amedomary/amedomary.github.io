@@ -11,6 +11,8 @@ define(["jquery"], function($) {
   canvas.height = h;
 
   const parts = [];
+  const maxStaticParts = 50;
+  let basePartCount = 0;
 
   class Part {
     constructor() {
@@ -45,7 +47,6 @@ define(["jquery"], function($) {
     }
   }
 
-  document.addEventListener("mousemove", logKey);
   let xxx = 0;
   let yyy = 0;
   function logKey(e) {
@@ -68,8 +69,10 @@ define(["jquery"], function($) {
     }
   }
 
-  document.addEventListener("click", createStaticDot);
   function createStaticDot(e) {
+    if (parts.length - basePartCount >= maxStaticParts) {
+      parts.splice(basePartCount, 1);
+    }
     parts.push(new MousePartStatic(e.clientX, e.clientY));
   }
 
@@ -87,7 +90,7 @@ define(["jquery"], function($) {
   }
 
   function reDrawparts() {
-    for (i in parts) {
+    for (let i = 0; i < parts.length; i++) {
       parts[i].position();
       parts[i].reDraw();
     }
@@ -95,8 +98,8 @@ define(["jquery"], function($) {
 
   function drawLines() {
     let x1, x2, y1, y2, l, opacity;
-    for (i in parts) {
-      for (j in parts) {
+    for (let i = 0; i < parts.length; i++) {
+      for (let j = i + 1; j < parts.length; j++) {
         x1 = parts[i].x;
         y1 = parts[i].y;
         x2 = parts[j].x;
@@ -104,7 +107,8 @@ define(["jquery"], function($) {
         l = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 
         if (l < properties.maxL) {
-          opacity = 1 - l / properties.maxL;
+          // Preserve the opacity of the previous two overlapping strokes.
+          opacity = 1 - Math.pow(l / properties.maxL, 2);
           ctx.lineWidth = "1.5";
           ctx.strokeStyle = `${properties.partLineSubColor} ${opacity})`;
           ctx.beginPath();
@@ -137,6 +141,9 @@ define(["jquery"], function($) {
       parts.push(new Part());
     }
 
+    basePartCount = parts.length;
+    document.addEventListener("mousemove", logKey);
+    document.addEventListener("click", createStaticDot);
     loop();
   }
 
