@@ -1,0 +1,81 @@
+portfolio.html
+  s_dabe7d4328c546::t_e4327f3464d89c 202
+  s_dabe7d4328c546::t_c5bb4412faaee4 189,195,198
+  s_dabe7d4328c546::t_44d209f7899a25 7-8,129-148,160
+  s_dabe7d4328c546::t_57b263b20a1e81 109
+  s_dabe7d4328c546::t_c039c11809f9f3 6,9,150,162
+  s_dabe7d4328c546::t_a09752845b6828 10,23,26-35,38,43-45
+  s_dabe7d4328c546::t_45fe73d5546c0b 151-159,161
+js/partials/background.js
+  s_dabe7d4328c546::t_f5d296fc7f9564 114-115,117-120
+  s_dabe7d4328c546::t_ac86b45e0fcfa3 18,36,77,82,94,100,104-105,111,116,267-269
+  s_dabe7d4328c546::t_88608a32bcd5a0 110,112-113
+animation.html
+  s_dabe7d4328c546::t_c5bb4412faaee4 201,206,208
+  s_dabe7d4328c546::t_a09752845b6828 5,18,21-31,35
+  s_dabe7d4328c546::t_e4327f3464d89c 212
+calculator.html
+  s_dabe7d4328c546::t_a09752845b6828 5,18,21-31,35
+  s_dabe7d4328c546::t_c5bb4412faaee4 144,149,151
+  s_dabe7d4328c546::t_e4327f3464d89c 155
+chart.html
+  s_dabe7d4328c546::t_a09752845b6828 5,18,21-31,35
+  s_dabe7d4328c546::t_c5bb4412faaee4 73,78,80
+  s_dabe7d4328c546::t_e4327f3464d89c 84
+index.html
+  s_dabe7d4328c546::t_a09752845b6828 10,23,26-36,38-66,69
+  s_dabe7d4328c546::t_e4327f3464d89c 195
+  s_dabe7d4328c546::t_57b263b20a1e81 112,116
+  s_dabe7d4328c546::t_88608a32bcd5a0 89,120,122
+  s_dabe7d4328c546::t_ba5101c9592f7b 131-132
+  s_dabe7d4328c546::t_44d209f7899a25 124
+  s_dabe7d4328c546::t_dafc53e4a50d50 88,121,123
+  s_dabe7d4328c546::t_c5bb4412faaee4 184,189,191
+  s_dabe7d4328c546::t_c039c11809f9f3 6,9,138,150
+form.html
+  s_dabe7d4328c546::t_c5bb4412faaee4 98,103,105
+  s_dabe7d4328c546::t_e4327f3464d89c 109
+  s_dabe7d4328c546::t_a09752845b6828 5,18,21-31,35
+3d.html
+  s_dabe7d4328c546::t_b732b8a8ef5442 31,40
+  s_dabe7d4328c546::t_a09752845b6828 5,19,22-29,34-35,38-39,41
+every-things-on-rem.html
+  s_dabe7d4328c546::t_a09752845b6828 5,19,22-29,34-35,38-39,41
+  s_dabe7d4328c546::t_b732b8a8ef5442 31,40
+css_var.html
+  s_dabe7d4328c546::t_b732b8a8ef5442 31,40
+  s_dabe7d4328c546::t_a09752845b6828 5,19,22-29,34-35,38-39,41
+css/main.css
+  s_dabe7d4328c546::t_0d679927f8b3c2 4-5
+  s_dabe7d4328c546::t_79594451159c69 6-10
+  s_dabe7d4328c546::t_42eba778906fe9 1-3
+  s_dabe7d4328c546::t_2964c529f0eaa7 22,2356-2358,2360-2363
+  s_dabe7d4328c546::t_e24852c61a77d5 2518-2519
+  s_dabe7d4328c546::t_748f610a96091a 19-21
+  s_dabe7d4328c546::t_403ec05b9d9a3d 23
+sitemap.xml
+  s_dabe7d4328c546::t_a09752845b6828 1-12
+robots.txt
+  s_dabe7d4328c546::t_a09752845b6828 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b7de39dac7abe1d3c1efd3ba4dd96b3d34721fa4",
+  "prompts": {},
+  "humans": {
+    "h_a5ac77f1a5fc4d": {
+      "author": "Maksim Grishin <Maksim.A.GRISHIN@raiffeisen.ru>"
+    }
+  },
+  "sessions": {
+    "s_dabe7d4328c546": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12680-35bc-76c3-ad83-c9a22061d6ae",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Maksim Grishin <Maksim.A.GRISHIN@raiffeisen.ru>"
+    }
+  }
+}
