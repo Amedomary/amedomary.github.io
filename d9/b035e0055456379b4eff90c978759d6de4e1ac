@@ -1,0 +1,46 @@
+js/every-things-on-rem.js
+  s_114b06520da283::t_17f6948466bc1d 1
+index.html
+  s_114b06520da283::t_37f5e3a3b9a9be 33
+  s_114b06520da283::t_ba65634ed37365 5-7,195
+  s_114b06520da283::t_4f7e4b60559c88 99-112
+js/partials/main_menu.js
+  s_114b06520da283::t_17f6948466bc1d 65-66,69-71
+  s_114b06520da283::t_20da9478b7d835 67-68,111
+AGENTS.md
+  h_a5ac77f1a5fc4d 1,3-66,68,83
+  s_114b06520da283::t_583204d5d60f38 2,67,69-82,84-112,114-122
+  s_114b06520da283::t_17f6948466bc1d 113
+js/partials/switch-theme.js
+  s_114b06520da283::t_17f6948466bc1d 6-9,46-47,50,63
+js/partials/bg-canvas.js
+  s_114b06520da283::t_17f6948466bc1d 14-15,73-75,93,101-102,110-111,144-146
+TODO.md
+  s_114b06520da283::t_06acbdf270714e 1-3
+css/main.css
+  s_114b06520da283::t_37f5e3a3b9a9be 3,5-8,24-25
+  s_114b06520da283::t_b089b231d31d02 1
+  s_114b06520da283::t_4f7e4b60559c88 2,4,9,11-12
+  s_114b06520da283::t_35bda7fc32b07a 10,13-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d9b035e0055456379b4eff90c978759d6de4e1ac",
+  "prompts": {},
+  "humans": {
+    "h_a5ac77f1a5fc4d": {
+      "author": "Maksim Grishin <Maksim.A.GRISHIN@raiffeisen.ru>"
+    }
+  },
+  "sessions": {
+    "s_114b06520da283": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12652-74e2-7410-a094-137f6517a899",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Maksim Grishin <Maksim.A.GRISHIN@raiffeisen.ru>"
+    }
+  }
+}
