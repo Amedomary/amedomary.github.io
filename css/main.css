@@ -1,3 +1,28 @@
+/* Keep the ad aligned with the project menu. */
+.main-page .b-main-nav,
+.main-page .b-main-ad {
+  width: 600px;
+  max-width: 100%;
+  flex: 0 0 auto;
+}
+
+.main-page .b-main-ad {
+  min-height: 150px;
+  margin: 24px 0 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 1023px) {
+  .main-page .b-button--promo {
+    position: relative;
+    inset: auto;
+    transform: none;
+    align-self: flex-end;
+    margin-top: 24px;
+    max-width: 100%;
+  }
+}
+
 body,
 html {
   height: 100%;

@@ -3,7 +3,10 @@ define(['jquery'], function ($) {
   let $BG = $('.js-background-wrapper');
   let isOn = true;
 
-  const cookiesArray = document.cookie.split(';');
+  const themeCookie = document.cookie.split(';')
+    .map(cookie => cookie.trim())
+    .find(cookie => /^theme=(light|dark)$/.test(cookie));
+  let hasManualTheme = Boolean(themeCookie);
 
   const themeValueOS = window
     .getComputedStyle(document.documentElement)
@@ -40,27 +43,11 @@ define(['jquery'], function ($) {
     toggleBG(isOn);
   }
 
-  if (cookiesArray[0].length) {
-    // Если есть куки
-    if (cookiesArray.filter((item) => item.includes('theme=light')).length) {
-      isOn = false;
-    } else if (
-      cookiesArray.filter((item) => item.includes('theme=dark')).length
-    ) {
-      isOn = true;
-    }
-    toggleOnWithCookie();
-  } else {
-    // если куки нет - используем настройки ОС
-    if (themeValueOS === 'light') {
-      isOn = false;
-    } else if (themeValueOS === 'dark') {
-      isOn = true;
-    }
-    toggleOn();
-  }
+  isOn = hasManualTheme ? themeCookie === 'theme=dark' : themeValueOS !== 'light';
+  toggleOn();
 
   $linkTheme.click(function () {
+    hasManualTheme = true;
     isOn = !isOn;
     toggleOnWithCookie();
   });
@@ -73,7 +60,7 @@ define(['jquery'], function ($) {
       return;
     }
     function listener({ matches, media }) {
-      if (!matches) {
+      if (!matches || hasManualTheme) {
         // Not matching anymore = not interesting
         return;
       }
