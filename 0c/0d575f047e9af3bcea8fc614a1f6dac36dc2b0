@@ -1,0 +1,19 @@
+index.html
+  s_dabe7d4328c546::t_fb33919ff1d93c 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0c0d575f047e9af3bcea8fc614a1f6dac36dc2b0",
+  "prompts": {},
+  "sessions": {
+    "s_dabe7d4328c546": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12680-35bc-76c3-ad83-c9a22061d6ae",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Maksim Grishin <Maksim.A.GRISHIN@raiffeisen.ru>"
+    }
+  }
+}
