@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Yandex.RTB временно отключён
+  <script>window.yaContextCb=window.yaContextCb||[]</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
+    -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#111011">
@@ -16,23 +20,29 @@
   <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#000000">
   <meta name="msapplication-TileColor" content="#ff7a20">
   <meta name="theme-color" content="#ffffff">
-  <meta property="og:image" content="images/inhtml/og-image.jpg">
+  <meta property="og:image" content="https://amedomary.ru/images/inhtml/og-image.jpg">
   <meta property="og:image:width" content="1351">
   <meta property="og:image:height" content="707">
-  <meta property="og:title" content="Amedomary's site.">
-  <meta name="description" content="Amedomary">
-  <meta property="og:description" content="Amedomary">
-  <meta property="og:url" content="https://amedomary.github.io/">
-  <title>Portfolio</title><!-- Yandex.Metrika counter -->
+  <meta property="og:title" content="Проекты и статьи Максима Гришина | Amedomary">
+  <meta name="description" content="Портфолио Amedomary: веб-приложения, эксперименты с Canvas, CSS и JavaScript, интерфейсы и статьи на Хабре.">
+  <meta property="og:description" content="Портфолио Amedomary: веб-приложения, эксперименты с Canvas, CSS и JavaScript, интерфейсы и статьи на Хабре.">
+  <meta property="og:url" content="https://amedomary.ru/portfolio.html">
+    <link rel="canonical" href="https://amedomary.ru/portfolio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Amedomary">
+    <meta name="twitter:card" content="summary_large_image">
+  <title>Проекты и статьи Максима Гришина | Amedomary</title><!-- Yandex.Metrika counter -->
   <script
     type="text/javascript"> (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(48625547, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true }); </script>
-  <noscript>
-    <div><img src="https://mc.yandex.ru/watch/48625547" style="position:absolute; left:-9999px;" alt="" /></div>
-  </noscript> <!-- /Yandex.Metrika counter -->
+   <!-- /Yandex.Metrika counter -->
   <link href="css/main.css?1615951538082" rel="stylesheet">
 </head>
 
 <body>
+    <noscript>
+    <div><img src="https://mc.yandex.ru/watch/48625547" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
   <div class="b-page-wrapper b-page-wrapper--scroll">
     <div class="b-header b-header--no-back"><img class="b-header__bg-primary js-header-bg" src="images/content/3d.webp"
         alt="" title="" role="presentation" />
@@ -96,7 +106,7 @@
                 </h3><span class="b-skill__description">Простой калькулятор</span>
                 <p class="b-skill__date">[5.06.2017]</p>
               </a></li>
-            <li><a href="http://playbook.su/">
+            <li><a href="https://playbook.su/">
                 <h3 class="b-skill__title">Playbook<span class="b-skill__tag"> StartUp</span>
                 </h3><span class="b-skill__description">Платформа для подбора игроков тренеров и спарринг-партнёров</span>
                 <p class="b-skill__date">[12.01.2020]</p>
@@ -116,7 +126,40 @@
                 </h3><span class="b-skill__description">Css реализация 3D</span>
                 <p class="b-skill__date">[1.06.2019]</p>
               </a></li>
+            <li><a href="https://habr.com/ru/articles/789698/">
+                <h3 class="b-skill__title">Вёрстка — это не тупо<span class="b-skill__tag"> Хабр</span>
+                </h3><span class="b-skill__description">Частые ошибки во Frontend-разработке и вёрстке.</span>
+                <p class="b-skill__date">[29.01.2024]</p>
+              </a></li>
+            <li><a href="https://habr.com/ru/articles/723294/">
+                <h3 class="b-skill__title">Тиндер для теннисистов<span class="b-skill__tag"> Хабр</span>
+                </h3><span class="b-skill__description">Телеграм-бот для поиска спарринг-партнёров по большому теннису.</span>
+                <p class="b-skill__date">[30.03.2023]</p>
+              </a></li>
+            <li><a href="https://habr.com/ru/articles/459054/">
+                <h3 class="b-skill__title">Тепловая карта кликов — как пользователи ведут себя на сайте<span class="b-skill__tag"> Хабр</span>
+                </h3><span class="b-skill__description">Клики пользователей, размеры кнопок и удобство интерфейса.</span>
+                <p class="b-skill__date">[16.07.2019]</p>
+              </a></li>
+            <li><a href="https://habr.com/ru/articles/489602/">
+                <h3 class="b-skill__title">Prerender on canvas 2D<span class="b-skill__tag"> Хабр</span>
+                </h3><span class="b-skill__description">Предварительная отрисовка кадров для оптимизации Canvas-анимации.</span>
+                <p class="b-skill__date">[25.02.2020]</p>
+              </a></li>
           </ol>
+          <!-- Yandex.RTB R-A-20214062-1 временно скрыт
+          <aside class="b-portfolio-ad" aria-label="Реклама">
+            <div id="yandex_rtb_R-A-20214062-1"></div>
+          </aside>
+          <script>
+            window.yaContextCb.push(() => {
+              Ya.Context.AdvManager.render({
+                "blockId": "R-A-20214062-1",
+                "renderTo": "yandex_rtb_R-A-20214062-1"
+              });
+            });
+          </script>
+        -->
         </div>
       </div>
     </main>
@@ -143,77 +186,24 @@
       class="b-hamburger__line b-hamburger__line--mid"></span><span
       class="b-hamburger__line b-hamburger__line--bot"></span></a>
   <div class="b-main-menu js-main-menu">
-    <div class="b-main-menu__grid">
+    <div class="b-main-menu__grid b-main-menu__grid--social">
       <div class="b-main-menu__cell b-main-menu__cell--heading">
         <h3 class="b-main-menu__heading"><span>You can find me here</span>
         </h3>
       </div>
-      <div class="b-main-menu__cell b-main-menu__cell--one"
-        style="--bg-hover: transparent; --link-hover: var(--cl-red);">
-      </div>
       <div class="b-main-menu__cell" style="--bg-hover: #7aa1bd;"><a class="b-main-menu__grid-link"
-          href="https://habr.com/ru/users/amedomary/posts/" title="" target="_blank">Habr</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #02ABEF;"><a class="b-main-menu__grid-link"
-          href="https://twitter.com/amedomary" title="" target="_blank">Twitter</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #4a76a8;"><a class="b-main-menu__grid-link"
-          href="https://vk.com/amedomary" title="" target="_blank">Vk</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: rgb(73,103,173);"><a class="b-main-menu__grid-link"
-          href="https://www.facebook.com/Amedomary73" title="" target="_blank">Facebook</a>
-      </div>
-      <div class="b-main-menu__cell"
-        style="--bg-hover: #000; --bg-image: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);">
-        <a class="b-main-menu__grid-link" href="https://www.instagram.com/amedomary2/" title=""
-          target="_blank">Instagram</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #0077b5;"><a class="b-main-menu__grid-link"
-          href="https://www.linkedin.com/in/maksim-grishin-b6a0b7184/" title="" target="_blank">Linkedin</a>
+          href="https://habr.com/ru/users/Amedomary/articles/" title="" target="_blank" rel="noopener noreferrer">Habr</a>
       </div>
       <div class="b-main-menu__cell" style="--bg-hover: white; --link-hover: #24292e;"><a class="b-main-menu__grid-link"
-          href="https://codepen.io/amedomary" title="" target="_blank">CodePen</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: white; --link-hover: #24292e;"><a class="b-main-menu__grid-link"
-          href="https://github.com/Amedomary" title="" target="_blank">GitHub</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #1687D0; --link-hover: #fff;"><a class="b-main-menu__grid-link"
-          href="https://marketplace.visualstudio.com/publishers/Amedomary" title="" target="_blank">Visual Studio</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #f33e1b;"><a class="b-main-menu__grid-link"
-          href="https://www.codewars.com/users/amedomary" title="" target="_blank">CodeWars</a>
-      </div>
-      <div class="b-main-menu__cell b-main-menu__cell--eleven" style="--bg-hover: #05CC47;"><a
-          class="b-main-menu__grid-link" href="https://www.deviantart.com/amedomary" title=""
-          target="_blank">Deviantart</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #0056FF;"><a class="b-main-menu__grid-link"
-          href="https://www.behance.net/amedomary" title="" target="_blank">Behance</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #ea4c89;"><a class="b-main-menu__grid-link"
-          href="https://dribbble.com/Amedomary" title="" target="_blank">Dribbble</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: rgb(79,173,234);"><a class="b-main-menu__grid-link"
-          href="https://www.artstation.com/amedomary" title="" target="_blank">ArtStation</a>
-      </div>
-      <div class="b-main-menu__cell b-main-menu__cell--twelve" style="--bg-hover: #6441A4;"><a
-          class="b-main-menu__grid-link" href="https://www.twitch.tv/iamed73" title="" target="_blank">Twitch</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #FF0000;"><a class="b-main-menu__grid-link"
-          href="https://www.youtube.com/channel/UCZmKz98jl0wPBtcqURgajGA?view_as=subscriber" title=""
-          target="_blank">YouTube</a>
-      </div>
-      <div class="b-main-menu__cell" style="--bg-hover: #0332ff;"><a class="b-main-menu__grid-link"
-          href="https://coub.com/mramed73" title="" target="_blank">Coub</a>
+          href="https://github.com/Amedomary" title="" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
       <div class="b-main-menu__cell b-main-menu__cell--cr" style="--bg-hover: transparent;">
         <ul>
-          <li>© Amedomary 2006-2022</li>
+          <li>© Amedomary 2006-2027</li>
         </ul>
       </div>
     </div>
   </div>
   <script src="js/require.js?1615951538089" data-main="js/portfolio"></script>
 </body>
-
 </html>

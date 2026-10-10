@@ -15,7 +15,7 @@ define(['jquery'], function ($) {
   const textAfter = 'Show more'; //текст После
   const $mainNavList = $('.js-main-list-nav');
   const $descriptionBlock = $('.js-description');
-  const $descriptionText = $('.js-description-block p');
+  const $descriptionText = $('.js-description-block');
   const $tagBar = $('.b-main-nav__tag-bar');
   const $visitDirectLink = $('.js-visit-direct-link');
   let $backgroundImageData; // Дата для фона
@@ -33,6 +33,7 @@ define(['jquery'], function ($) {
       tags: ['Animation', 'Vue.JS', 'UI/UX'],
     },
     id_timer: {
+      linkText: 'Открыть таймер',
       text:
         'Приложение для запуска таймера с возможностью поделиться своим событием',
       tags: ['SPA', 'Vue.JS', 'UI/UX', 'Alarm', 'Animation', 'firebase'],
@@ -50,15 +51,6 @@ define(['jquery'], function ($) {
     },
     id_game: {
       text: '2D игра с поддержкой геймпадов',
-      tags: ['2D', 'game', 'canvas'],
-    },
-    id_xcom: {
-      text: `
-      <p>2D Игра</p>
-      <p><a href="//amedomary.github.io/myFirstGame/" target="_blank">Visit Direct Link (2D)</a></p>
-
-      <p>Стратегическая пошаговая игра в жанре X-com</p>
-    `,
       tags: ['2D', 'game', 'canvas'],
     },
     id_animation: {
@@ -82,10 +74,12 @@ define(['jquery'], function ($) {
       tags: ['markdown', 'CSS-vars', 'themes'],
     },
     id_portfolio: {
+      linkText: 'Все проекты и статьи',
       text: 'Продолжение списка моих проектов',
       tags: ['markdown'],
     },
     id_3d: {
+      linkText: 'Открыть расширение',
       text: 'Расширение для touch bar (macbook pro) под VS Code',
       tags: ['VS Code', 'Extention', 'TS'],
     },
@@ -97,17 +91,31 @@ define(['jquery'], function ($) {
       tags: ['2D', 'Canvas'],
     },
     id_beercoin: {
+      linkText: 'Открыть сайт',
       text:
         'Подкинь монетку и пей бесплатно! Закрути свою удачу и получи скидку в случайном баре.',
       tags: ['3D', 'CSS', 'React', 'Startup'],
     },
     id_playbook: {
+      linkText: 'Открыть сайт',
       text:
         `
           <p>Поиск спарринг-партнера по большому теннису</p>
-          <p>Playbook прост и увлекателен. Используйте функцию «Сыграть», чтобы поставить лайк другому пользователю, и если вам тоже предложили «Сыграть», то спарринг-пара совпала! Врывайтесь на корт и играйте!</p>
+          <p>Используйте функцию «Сыграть», чтобы предложить другому игроку встречу на корте. Если интерес взаимный — спарринг-пара найдена!</p>
+          <p><a href="https://habr.com/ru/articles/723294/" target="_blank" rel="noopener noreferrer">О проекте на Хабре</a></p>
         `,
       tags: ['Startup', 'Telegram', 'Bot', 'Node.js'],
+    },
+
+    id_habr_markup: {
+      linkText: 'Читать на Хабре',
+      text: 'Вёрстка — это не тупо. Частые ошибки во Frontend-разработке и вёрстке.',
+      tags: ['Habr', 'CSS', 'HTML', 'UI/UX'],
+    },
+    id_habr_layout: {
+      linkText: 'Читать на Хабре',
+      text: 'Как создать макет для сайта и не остаться крайним. Подготовка макета к передаче на вёрстку.',
+      tags: ['Habr', 'UI/UX', 'HTML'],
     },
 
     // default
@@ -256,7 +264,9 @@ define(['jquery'], function ($) {
         dataDescription[idElement].text,
         dataDescription[idElement].tags
       );
-      $visitDirectLink.attr('href', dataHrefMainNavigation);
+      $visitDirectLink
+        .attr('href', dataHrefMainNavigation)
+        .text(dataDescription[idElement].linkText || 'Открыть демо');
       goInBtnAnimation(event);
     } else {
       // дабл клик для перехода

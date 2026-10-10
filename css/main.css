@@ -1,9 +1,24 @@
+/* Two links in the social menu. */
+.b-main-menu .b-main-menu__grid--social {
+  grid-template: auto 1fr auto / repeat(2, minmax(0, 1fr));
+}
+
+.b-main-menu__grid--social .b-main-menu__cell--heading,
+.b-main-menu__grid--social .b-main-menu__cell--cr {
+  grid-column: 1 / -1;
+}
+
 /* Keep the ad aligned with the project menu. */
 .main-page .b-main-nav,
 .main-page .b-main-ad {
   width: 600px;
   max-width: 100%;
   flex: 0 0 auto;
+}
+
+.b-portfolio-ad {
+  min-height: 150px;
+  margin-top: 24px;
 }
 
 .main-page .b-main-ad {
@@ -2338,9 +2353,14 @@ html[data-theme='blue'] .b-main {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
 }
+.b-main-nav__description .js-description-block {
+  line-height: 1.5;
+}
 .b-main-nav__description p {
-  margin-top: 0;
-  line-height: 1.4;
+  margin: 0 0 16px;
+}
+.b-main-nav__description p:last-child {
+  margin-bottom: 0;
 }
 .b-main-nav__description a,
 .b-main-nav__open-button a {
@@ -2495,8 +2515,8 @@ html[data-theme='blue'] .b-main {
   color: #fc2525;
 }
 .b-main-nav__open-button {
-  -webkit-margin-before: 0.5rem;
-  margin-block-start: 0.5rem;
+  -webkit-margin-before: 1rem;
+  margin-block-start: 1rem;
 }
 html:not(.touchevents) .b-main-nav::-webkit-scrollbar-thumb {
   min-height: 20px;
